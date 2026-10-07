@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="cardiologist.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+        
+    </head>
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="cardiologist-logo.png" alt="">
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li class="menu-item">Home</li>
+                <li class="menu-item">Services
+
+                    
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">Heart Surgery</li>
+                        <li class="sub-menu-item">Valve Diseases</li>
+                        <li class="sub-menu-item">Children’s Services</li>
+                        <li class="sub-menu-item">Heart Transplant</li>
+                        <li class="sub-menu-item">Endocrinology</li>
+                        <li class="sub-menu-item">Emergency care</li>
+                        <li class="sub-menu-item">Cardiac Surgery</li>
+                        <li class="sub-menu-item">Angioplasty</li>
+                        
+
+                    </ul>
+                </li>
+
+                <li class="menu-item">About</li>
+                <li class="menu-item">Blog</li>
+
+                <li class="menu-item">Projects
+
+                    <ul class="sub-menu-project">
+                        <li class="sub-menu-item-project">With AIIMS</li>
+                        <li class="sub-menu-item-project">With Max</li>
+                        <li class="sub-menu-item-project">With Fortis</li>
+                        
+                        
+                    
+
+                    </ul>
+                </li>
+
+
+                
+                <li class="menu-item">Contact Us</li>
+            </ul>
+
+            <i class="fa-solid fa-cart-shopping my-icon"></i>
+            <hr>
+            <!--Full screen ssearch bar-->
+
+                <input type="checkbox" class="search-input" id="search" placeholder="Write Search Keyword & Press Enter">
+                <label for="search">
+                    <i class="fa-solid fa-magnifying-glass my-icon open-search"></i>
+                    <i class="fa-solid fa-xmark cancel-search"></i>
+                </label>
+
+                <div class="search-bar">
+                    <input type="search" class="second-search" placeholder="Write Search keyword & Press Enter">
+                </div>
+
+            <!--End of search bar-->
+            <i class="fa-solid fa-calendar-days my-icon"></i>
+        
+
+           
+
+        </nav>
+
+        <div class="make-appointment">
+            <p>Make Appointment<p>
+                <i class="fa-solid fa-bars three-line"></i>
+                <i class="fa-solid fa-xmark"></i>
+        </div>
+        
+        
+
+
+    </header>
+
+    <style>
+        *
+{
+    padding: 0;
+    margin: 0;
+    /* font-family: "Nunito Sans", sans-serif;  */
+    list-style: none;
+}
+
+header
+{
+    width: 100%;
+    height: 80px;
+    /* background-color: gold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -5px 10px;
+    font-family: "Nunito Sans", sans-serif; 
+    position: fixed;
+    z-index: 100;
+    background-color: #FFFFFF;
+}
+
+
+.logo
+{
+    height: 80px;
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.logo>img
+{
+    height: 40px;
+    
+}
+
+nav
+{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10x;
+    width: 52%;
+    
+}
+.menu
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif; 
+    font-weight: 600;
+    line-height: 80px;
+    
+   
+    
+
+}
+
+.menu-item
+{
+    transition: 0.5s all;
+}
+
+.menu-item:hover
+{
+    color: red;
+    cursor: pointer;
+
+}
+
+.sub-menu
+{
+    /* margin-top: 447px; */
+    position: absolute;
+    line-height: 0;
+    border-top: 2px solid #ee344e;;
+    display: none;
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif; 
+    z-index: 10;
+  
+
+   
+}
+.menu-item:hover .sub-menu
+{
+    display: block;
+}
+.sub-menu-item
+{
+    padding: 27px 37px; 
+    background: white;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, .10);
+    font-size: 16px;
+    transition: 0.5s all;
+    
+}
+
+.sub-menu-item:hover
+{
+    background-color: #EE344E;
+    color: white;
+
+}
+
+.sub-menu-project
+{
+    position: absolute;
+    line-height: 0;
+    border-top: 2px solid #ee344e;;
+    display: none;
+    font-size: 16px;
+    z-index: 10;
+    
+}
+
+.sub-menu-item-project
+{
+    padding: 27px 37px; 
+    background: white;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, .10);
+    font-size: 16px;
+    transition: 0.5s all;
+    
+}
+
+
+.sub-menu-item-project:hover
+{
+    background-color: #EE344E;
+    color: white;
+
+}
+
+.menu-item:hover .sub-menu-project
+{
+    display: block;
+}
+
+.my-icon
+{
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.fa-cart-shopping
+{
+   
+    /* border: 2px solid black; */
+    border-right: 1px solid;
+    padding: 10px;
+    
+
+}
+
+
+/* for full screen search */
+
+
+.checkbox
+{
+    display: block;
+
+
+}
+
+.search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    transform: translateY(-400px);
+    transition: 0.3s;
+    display: grid;
+    place-items: center;
+  }
+  .second-search
+  {
+    padding: 10px;
+    width: 1200px;
+    height: 100px;
+    font-size: 30px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    text-transform: capitalize;
+    outline: none;
+  }
+  .second-search::placeholder
+  {
+    font-size: 28px;
+    color: white;
+
+  }
+
+  .second-search:hover
+  {
+    border-bottom: 2px solid white;
+
+    
+  }
+
+  
+  #search
+  {
+    display: none;
+  }
+  
+  #search[type="checkbox"]:checked ~ .search-bar
+  {
+    /* background-color: #EE344E; */
+    transform: translateY(0px);
+    scale: 1;
+  }
+  .cancel-search
+  {
+    transform: translateX(400px);
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    scale: 0;
+    z-index: 20000;
+    position: absolute;
+    transition: 0.3s;
+  }
+  #search[type="checkbox"]:checked ~ label .cancel-search
+  {
+    scale: 1;
+    transform: translateX(400px);
+
+  }
+  .search-input {
+    width: 80%;
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+  }
+
+  /* Full screen search bar End Here */
+
+.fa-calendar-days
+{
+    border-radius: 0%;
+    border: 5px solid white;
+    font-size: 19px;
+    color: white;
+    /* background-color: black; */
+    transform: translate(19px, 0px);
+    border: 7px solid white;
+    color: black;
+    border-radius: 50%;
+    font-size: x-large;
+    background-color: cornsilk;
+}
+    
+
+.make-appointment
+{
+    background-color: #EE344E;
+    width: 28%;
+    height: 80px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif; 
+    font-weight: 600;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    color: white;
+    
+}
+
+.make-appointment>p
+{   
+    padding: 30px;
+    letter-spacing: .5px;
+    cursor: pointer;
+    
+}
+
+.three-line
+{
+    font-size: 30px;
+    /* color: black; */
+    transform: translate(124px, -82px);
+}
+
+.fa-xmark
+{
+    color: black;
+    font-size: 30px;
+    background-color: red;
+    transform: translate(95px, -79px);
+    display: none;
+
+}
+/* first homepage section */
+
+@media (max-width: 600px)
+{
+
+.header
+{
+    width: 100%;
+    
+
+}
+  
+nav 
+{
+    display: none;
+    
+}
+
+.logo
+{
+    margin-left: -170px;
+}
+
+}
+
+
+    </style>
+
+</body>
+</html>

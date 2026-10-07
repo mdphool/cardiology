@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cardiologist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+    
+    <header>
+    <div class="logo">
+        <img src="cardiologist-logo.png" alt="">
+    </div>
+
+    <!-- Mobile menu toggle -->
+    <input type="checkbox" id="mobile-menu-toggle">
+
+    <label for="mobile-menu-toggle" class="mobile-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav>
+        <ul class="menu">
+            <li class="menu-item">Home</li>
+
+            <li class="menu-item">Services
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">Heart Surgery</li>
+                    <li class="sub-menu-item">Valve Diseases</li>
+                    <li class="sub-menu-item">Children’s Services</li>
+                    <li class="sub-menu-item">Heart Transplant</li>
+                    <li class="sub-menu-item">Endocrinology</li>
+                    <li class="sub-menu-item">Emergency care</li>
+                    <li class="sub-menu-item">Cardiac Surgery</li>
+                    <li class="sub-menu-item">Angioplasty</li>
+                </ul>
+            </li>
+
+            <li class="menu-item">About</li>
+            <li class="menu-item">Blog</li>
+
+            <li class="menu-item">Projects
+                <ul id="ttt" class="sub-menu-project">
+                    <li class="sub-menu-item-project">With AIIMS</li>
+                    <li class="sub-menu-item-project">With Max</li>
+                    <li class="sub-menu-item-project">With Fortis</li>
+                </ul>
+            </li>
+
+            <li class="menu-item">Contact Us</li>
+        </ul>
+
+        <i class="fa-solid fa-cart-shopping my-icon"></i>
+        <hr>
+
+        <input type="checkbox" class="search-input" id="search">
+
+        <label for="search">
+            <i class="fa-solid fa-magnifying-glass my-icon open-search"></i>
+            <i class="fa-solid fa-xmark cancel-search"></i>
+        </label>
+
+        <div class="search-bar">
+            <input type="search" class="second-search"
+                   placeholder="Write Search keyword & Press Enter">
+        </div>
+
+        <i class="fa-solid fa-calendar-days my-icon"></i>
+    </nav>
+
+    <div class="make-appointment">
+        <p>Make Appointment</p>
+    </div>
+</header>   
+
+
+    <!--first homepage section-->
+
+    <section class="homepage">
+
+        <div class="homepage-text">
+            <p class="commit">COMMIT TO BE FIT</p>
+            <p class="heart-text">Healthy Habits Are Your Heart's Desire</p>
+
+            <div class="for-button">
+            <div class="read-more">Read More</div>
+            <div class="contact-us">Contact Us</div>
+        </div>
+
+        </div>
+    </section>
+
+    <!--second homepage section-->
+
+    <section>
+        <div class="second-page">
+            <div class="heart-surgery">
+                <div class="heart-surgery-img"></div>
+
+                <div class="heart-surgery-text">
+                   <p>SURGERY</p>
+                   <h1>Heart Surgery</h1>
+
+                   
+                    <div class="second-page-icon">
+                   <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                
+                </div>
+            </div>
+
+            <div class="valve-diseases">
+
+                <div class="valve-diseases-img"></div>
+
+                <div class="valve-diseases-text">
+                    <p>SAVING LIVES</p>
+                   <h1>Valve Diseases</h1>
+
+                   
+
+                   <div class="second-page-icon">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                 </div>
+                   
+                </div>
+                
+            </div>
+
+            <div class="children-services">
+
+                <div class="children-services-img"></div>
+
+                <div class="children-services-text">
+
+                    <p>GREAT CARE</p>
+                   <h1>Children's Services</h1>
+
+                
+
+                <div class="second-page-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                 </div>
+                
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    
+
+    <!--Third homepage section-->
+    <section>
+        <div class="third-page">
+            <div class="third-page-heading-text">
+
+                <p>_SPECIAL SERVICES_</p>
+                <h1>Why you should choose us</h1>
+            </div>
+
+            <div class="third-page-center">
+
+            <div class="left-side">
+                <div class="cardio-monitoring">
+                    <div class="circle-check-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div class="text">
+
+                    <h1>Cardio Monitoring</h1>
+                    <p>We have latest Cardio Monitoring technologies in our health care.</p>
+
+                </div>
+                </div>
+
+                <div class="expert-cardiologist">
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div class="text">
+                    <h1>Expert Cardiologist</h1>
+                    <p>Our Expert Cardiologists are easily manage all heart surgeries.</p>
+                </div>
+
+                </div>
+
+                <div class="comfort-environment">
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div class="text">
+                    <h1>Comfort Environment</h1>
+                    <p>Comfort Environment provide to all patient at heath care hospital.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="third-page-img"></div>
+
+            <div class="right-side">
+
+                <div class="oxygen-therapy">
+                    <div class="circle-check-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div class="text">
+
+                    <h1>Oxygen Therapy</h1>
+                    <p>We have latest Cardio Monitoring technologies in our health care.</p>
+
+                </div>
+                </div>
+
+                <div class="septal-mastectomy">
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div class="text">
+                    <h1>Septal Mastectomy</h1>
+                    <p>Our Expert Cardiologists are easily manage all heart surgeries.</p>
+                </div>
+
+                </div>
+
+                <div class="coil-embolization">
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <div class="text">
+                    <h1>Coil Embolization</h1>
+                    <p>Comfort Environment provide to all patient at heath care hospital.</p>
+                </div>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!--Fourth homepage section-->
+
+    <section>  <!--Fourth  section-->
+
+        <div class="fourth-page-main">
+            <div class="fourth-page-main1">
+                <div class="fourth-page-content">
+                    
+
+                    
+
+                    <div class="left-side-area">
+                        <div class="left-side-area-text">
+                            <p>_OUR FACILITIES_</p>
+                            <h1>We Offering Healthcare Services to Client's</h1>
+                        
+                        </div>
+
+                        <div class="left-side-area-info">
+                            <div class="button-areas">
+                                <div class="emergency button-area-title">
+                                    <i class="fa-solid fa-truck-medical button-areas-icon"></i>
+                                    <p class="button-areas-text" style="color: white;">EMERGENCY</p>
+
+                                </div>
+
+                                <div class="facilities button-area-title">
+                                    <i class="fa-solid fa-house-chimney-medical button-areas-icon"></i>
+                                    <p class="button-areas-text">FACILITIES</p>
+
+                                </div>
+
+                                <div class="reaction button-area-title">
+                                    <i class="fa-solid fa-flask button-areas-icon"></i>
+                                    <p class="button-areas-text">REACTION</p>
+
+                                </div>
+                            </div>
+
+                            <div class="be-right-path">
+                                <div class="be-right-path-img"></div>
+
+                                <div class="be-right-path-text">
+                                    <p>Be Right Path for your Start Up with Business Consulting with challenges it presents may seem daunting, but we help you approach change with confidence.</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+
+                    <div class="right-side-area">
+                        <div class="make-an-appointment-form">
+                            <form>
+
+                                <h1>Make An Appointment</h1>
+                                <div class="form-group">
+                                    
+                                    <input type="text" placeholder="Your Name *">
+                                </div>
+
+                                <div class="form-group">
+                                   
+                                    <input type="email" placeholder="Your Email *">
+                                </div>
+
+                                <div class="form-group">
+                                    
+                                    <select>
+                                        <option>Select Your Doctor</option>
+                                        <option>Dr. Zayn</option>
+                                        <option>Dr. Aayesha</option>
+                                        <option>Dr. Alisha</option>
+                                        <option>Dr. Edward</option>
+                                        <option>Dr. Sophia</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    
+                                    <textarea placeholder="Comment"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn-submit">SERVICE AT ONE GLANCE</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="fourth-page-main2">
+
+                <div class="fourth-page-div">
+                    
+                    <div class="appointment-i">
+                        <i class="fa-regular fa-calendar-check fourth-page-main2-icon"></i>
+
+                        <div class="appointment-text">
+                        <p>Have any Questions?</p>
+                        <h2>Book an appointment</h2>
+
+                    </div>
+                    </div>
+
+                    <div class="call-the-hospital-i">
+
+                        <i class="fa-solid fa-headset fourth-page-main2-icon"></i>
+
+                        <div class="call-the-hospital-i-text">
+                            <p>Have care Requirement?</p>
+                        <h2>Call the hospital</h2>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+    </section>
+    
+
+    <section>  <!--Fifth  section-->
+
+        <div class="fifth-page-main">
+            <div class="fifth-page-main-box">
+
+                <div class="fifth-page-content-box">
+                    <div class="fifth-page-heading-box">
+
+                    <h4>_WORKING PROCESS_</h4>
+                    <h2>How We Work?</h2>
+
+                </div>
+
+                <div class="fifth-page-desc-box">
+                    <p>Our expert are always provide best health care service. Why Cardioly service is best for the <br>
+                        heart treatments all types of patients like children's, elders etc...</p>
+
+                </div>
+
+                </div>
+
+                <div class="fifth-page-img-area">
+                    <div class="fifth-page-img-1 circle-img"> 
+                          
+                        <div class="fifth-page-img1-area circle-area"></div>
+
+                        <div class="fifth-page-content-area-1">
+                            <h1 class="fifth-page-heading">Appointment</h1>
+
+                        </div>
+
+                        <div class="fifth-page-cont-div-1">Book the appointment and go to the healthcare
+                        </div>
+                        
+                    </div>
+
+                    <div class="fifth-page-img-2 circle-img">
+
+                        <div class="fifth-page-img2-area circle-area">
+                            
+                        </div>
+
+                        <div class="fifth-page-content-area-2">
+                            <h1 class="fifth-page-heading">Doctor Checkup</h1>
+
+                        </div>
+
+                        <div class="fifth-page-cont-div-2">Doctor checkup patient heart bit and actions
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fifth-page-img-3 circle-img">
+
+                        <div class="fifth-page-img3-area circle-area">
+                            
+                        </div>
+
+                        <div class="fifth-page-content-area-3">
+                            <h1 class="fifth-page-heading">Manage Treatment</h1>
+
+                        </div>
+
+                        <div class="fifth-page-cont-div-3">Doctors are patients treatment manage easily
+                        </div>
+                    </div>
+
+
+                    <div class="fifth-page-img-4 circle-img">
+
+                        <div class="fifth-page-img4-area circle-area">
+                            
+                        </div>
+
+                        <div class="fifth-page-content-area-4">
+                            <h1 class="fifth-page-heading">Enjoy The Life</h1>
+
+                        </div>
+
+                        <div class="fifth-page-cont-div-4">Best care get patient & quickly enjoy a life
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section> <!--Sixth Section-->
+
+        <div class="sixth-page-main">
+
+            <div class="sixth-page-container">
+                <div class="box-1">
+
+                    <div class="box-1-head">
+                        <h1>_WHAT WE OFFER_</h1>
+                        <div class="box-1-para">Reasonable Plan of Treatment</div>
+
+                        <div class="box-1-para-2">We provide latest technology with expert specialist doctors in a reasonable cost. They are always provide to patient best care.</div>
+                    </div>
+
+
+                    <div class="d-flex">
+
+                        <div class="medical-solution">
+                            <div class="ms-icon">
+                                <i class="fa-solid fa-hospital-user d-flex-icon"></i>
+                            </div>
+
+                            <div class="ms-icon-content">
+                                <h1>Medical Solution</h1>
+                                <div class="d-flex-div-cont">We are provide the best and health care medical solutions
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="d-flex" style="margin-top: 30px;">
+
+                        <div class="heart-rate-monitor">
+                            <div class="hrm-icon">
+                                <i class="fa-solid fa-heart-circle-bolt d-flex-icon"></i>
+                            </div>
+
+                            <div class="ms-icon-content">
+                                <h1>Heart rate monitor</h1>
+                                <div class="d-flex-div-cont">Our doctor check patient heart rate on heart rate monitor
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="box-2">
+                    <div class="box-2-inner">
+                        <div class="basic-plan">Basic Plan</div>
+
+                        <div class="price-div">
+                        <div class="basic-plan-currency">$</div>
+                        <div class="basic-plan-price">199</div>
+                        <div class="basic-plan-month">/MONTH</div>
+
+                        
+
+                    </div>
+
+                    <div class="basic-plan-price-box">
+
+                        <div class="check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="check-text">Medical Specialties</p>
+
+                        </div>
+
+                        <div class="check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="check-text">Investigation</p>
+
+                        </div>
+
+                         <div class="check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="check-text">Medical Consultation</p>
+
+                        </div>
+
+                        <div class="check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="check-text">Home Visits</p>
+
+                        </div>
+
+                        <div class="check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="check-text">Treatments</p>
+
+                        </div>
+
+                        <div class="price-box-btn">
+                            <a href="#">Buy Now</a>
+                        </div>
+
+                        
+
+
+                    </div>
+
+                    </div>
+                </div>
+
+                <div class="box-3">
+                    
+                    <div class="box-3-inner">
+                        <div class="box-3-basic-plan">Professional Plan</div>
+
+                        <div class="box-3-price-div">
+                        <div class="box-3-basic-plan-currency">$</div>
+                        <div class="box-3-basic-plan-price">269</div>
+                        <div class="box-3-basic-plan-month">/MONTH</div>
+
+                        
+
+                    </div>
+
+                    <div class="box-3-basic-plan-price-box">
+
+                        <div class="box-3-check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="box-3-check-text">Medical Specialties</p>
+
+                        </div>
+
+                        <div class="box-3-check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="box-3-check-text">Investigation</p>
+
+                        </div>
+
+                         <div class="box-3-check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="box-3-check-text">Medical Consultation</p>
+
+                        </div>
+
+                        <div class="box-3-check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="box-3-check-text">Home Visits</p>
+
+                        </div>
+
+                        <div class="box-3-check-icon">
+
+                            <i class="fa-solid fa-check"></i>
+                            <p class="box-3-check-text">Treatments</p>
+
+                        </div>
+
+                        <div class="price-box-btn">
+                            <a href="#">Buy Now</a>
+                        </div>
+
+                        
+
+
+                    </div>
+
+                    </div>
+                </div>
+
+            </div>  
+        </div>
+
+    </section>
+
+    <section> <!--seventh section-->
+
+        <div class="seventh-page-main">
+            <div class="seventh-page-container">
+
+                <div class="seventh-page-content">
+                    <div class="seventh-page-headings">
+                        <h4>_READ OUR BLOG_</h4>
+                        <h2>Featured News and Advices</h2>
+                    </div>
+
+                    <div class="seventh-page-para">
+                        <p>We provide the special tips and advice’s of heath care treatment and high level of best technology involve in the our hospital.</p>
+                    </div>
+                </div>
+
+                <div class="seventh-page-card">
+
+                    <div class="seventh-page-card-1">
+
+                        <div class="card-1-first-phase top">
+
+                        </div>
+
+                        <div class="card-1-second-phase bottom">
+
+                            <div class="second-phase-container">
+
+                            <div class="admin-and-comments">
+                                <div class="admin">
+                                    <i class="fa-solid fa-user"></i>
+                                    <p>ADMIN</p>
+                                </div>
+                                
+                                <div class="comments"><i class="fa-solid fa-comments"></i>
+                                    <p>COMMENTS</p>
+                                </div>
+                            </div>
+
+                            <div class="second-phase-content">
+                                <h1>Is Running Really Good for the Heart?</h1>
+                                <p>Cardiology is a medical specialty and a branch of internal medicine</p>
+                            </div>
+
+                            <div class="second-phase-read-more">
+                                <div class="greater-than">
+                                    <i class="fa-solid fa-greater-than"></i>
+                                </div>
+
+                                <p>Read More</p>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+
+                    <div class="seventh-page-card-2">
+
+                        <div class="card-2-first-phase top">
+
+                        </div>
+
+                        <div class="card-2-second-phase bottom">
+                            <div class="second-phase-container">
+
+                                <div class="admin-and-comments">
+                                    <div class="admin">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>ADMIN</p>
+                                    </div>
+                                    
+                                    <div class="comments"><i class="fa-solid fa-comments"></i>
+                                        <p>COMMENTS</p>
+                                    </div>
+                                </div>
+    
+                                <div class="second-phase-content">
+                                    <h1>Modeling data increase to endovascular therapy</h1>
+                                    <p>Cardiology is a medical specialty and a branch of internal medicine</p>
+                                </div>
+    
+                                <div class="second-phase-read-more">
+                                    <div class="greater-than">
+                                        <i class="fa-solid fa-greater-than"></i>
+                                    </div>
+    
+                                    <p>Read More</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="seventh-page-card-3">
+
+                        <div class="card-3-first-phase top">
+
+                        </div>
+
+                        <div class="card-3-second-phase bottom">
+                            <div class="second-phase-container">
+
+                                <div class="admin-and-comments">
+                                    <div class="admin">
+                                        <i class="fa-solid fa-user"></i>
+                                        <p>ADMIN</p>
+                                    </div>
+                                    
+                                    <div class="comments"><i class="fa-solid fa-comments"></i>
+                                        <p>COMMENTS</p>
+                                    </div>
+                                </div>
+    
+                                <div class="second-phase-content">
+                                    <h1>Get the Exercise Tips for Limited Mobility</h1>
+                                    <p>Cardiology is a medical specialty and a branch of internal medicine</p>
+                                </div>
+    
+                                <div class="second-phase-read-more">
+                                    <div class="greater-than">
+                                        <i class="fa-solid fa-greater-than"></i>
+                                    </div>
+    
+                                    <p>Read More</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section> <!--eight section-->
+        <div class="eight-main-container">
+
+            <div class="eight-container">
+
+            <div class="container-first-box">
+                
+                <div class="cardioly-img"> </div>
+
+                <div class="clinic-add">
+
+                    <div class="add-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div class="add-details">
+
+                        <h1>Our Clinic Address</h1>
+                        <p>456, Lorem Street, USA</p>
+
+                    </div>
+
+                </div>
+
+                <div class="phone-no">
+
+                    <div class="add-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div class="phoneno-details">
+                    <h1>Phone Number</h1>
+                    <p>(+00)888.666.88</p>
+                     </div>
+                </div>
+
+                <div class="footer-social-logo">
+
+                    <div class="footer-social-media">
+                        <i class="fa-brands fa-facebook-f social-media"></i>
+                        <i class="fa-brands fa-twitter social-media"></i>
+                        <i class="fa-brands fa-linkedin social-media"></i>
+                        <i class="fa-brands fa-youtube social-media"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+            <div class="eight-container-second-box">
+
+                <div class="eight-container-parent">
+                    <div class="information-box">
+
+                        <div class="for-info-heading footer-titles">
+                            <h1>Information</h1>
+
+                        </div>
+
+                        <div class="for-info-menu">
+                            <ul class="ul-menu">
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>About Us</a></li>
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>Service</a></li>
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>Best Seller</a></li>
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>Privacy policy</a></li>
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>Expert Tips</a></li>
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>Customer</a></li>
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>Collections</a></li>
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>Careers</a></li>
+                                <li class="li-menu"><a href="#"><span class="span-li">＞</span>Change Location</a></li>
+                               
+                                
+                                
+                                
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="latest-news-box">
+
+                        <div class="for-latest-news-heading footer-titles">
+                            <h1>Latest News</h1>
+
+                        </div>
+
+                        <div class="latest-news-queries">
+                            <div class="query-1">
+
+                                <div class="query-logo-1"></div>
+                                <div class="query-content">
+                                    <p>Is Running Really Good for <br>the Health?</p>
+                                    <p style="font-size: 13px; color: #EE344E;">May 27,2024</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="query-2">
+
+                                <div class="query-logo-2"></div>
+                                <div class="query-content">
+                                    <p>Modeling data increase to Endovascular therapy</p>
+                                    <p style="font-size: 13px; color: #EE344E;">May 27,2024</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="news-letter-box">
+
+                        <div class="for-newsletter-box-heading footer-titles">
+                            <h1>Newsletter</h1>
+
+                        </div>
+
+                        <div class="for-newsletter">
+                            <p>Sign up today for hints, tips and <br>the latest product news</p>
+                            <input type="email" placeholder="Your email address" class="newsletter-input">
+                            <div class="newsletter-btn">Submit</div>
+                        </div>
+
+
+    
+                    </div>
+    
+                    <div class="opening-hours-box">
+
+                        <div class="opening-hours-heading footer-titles">
+                            <h1>Opening Hours</h1>
+
+                        </div>
+
+                        <div class="for-opening-hour-menu">
+                            <ul class="opening-hour-ul-menu">
+                                <li class="opening-hour-li-menu">Mon – Tue</a></li>
+                                <li class="opening-hour-li-menu">10:00 – 18:00</a></li>
+                                <li class="opening-hour-li-menu">Wed – Thur</a></li>
+                                <li class="opening-hour-li-menu">10:00 – 17:00</a></li>
+                                <li class="opening-hour-li-menu">Fri – Sat</a></li>
+                                <li class="opening-hour-li-menu">10:00 – 12:30</a></li>
+                                <li class="opening-hour-li-menu">Saturday</a></li>
+                                <li class="opening-hour-li-menu">10:00 – 12:30</a></li>
+                                <li class="opening-hour-li-menu">Sunday</a></li>
+                                <li class="opening-hour-li-menu">Closed</a></li>
+                               
+                                
+                                
+                                
+                            </ul>
+
+
+                        </div>
+    
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-copyright">
+                <h3>Copyright © 2024 <span style="cursor: pointer;">Cardioly, </span>All Rights Reserved.</h3>
+            </div>
+            
+            <div class="footer-menu">
+                <ul class="footer-ul">
+                    <li class="footer-li"><a href="#">FAQ</a></li>
+                    <li class="footer-li"><a href="#">About Us</a></li>
+                    <li class="footer-li"><a href="#">Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

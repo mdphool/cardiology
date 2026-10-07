@@ -1,0 +1,6178 @@
+/* cardiologist.css - Fully responsive without changing HTML structure */
+
+* {
+    padding: 0;
+    margin: 0;
+    /* font-family: "Nunito Sans", sans-serif;  */
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    /* background-color: gold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -5px 10px;
+    font-family: "Nunito Sans", sans-serif;
+    position: fixed;
+    z-index: 100;
+    background-color: #FFFFFF;
+    padding: 0 15px;
+}
+
+.logo {
+    height: 80px;
+    width: 20%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.logo>img {
+    height: 40px;
+
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10x;
+    width: 52%;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+.menu-item {
+    transition: 0.5s all;
+    position: relative;
+}
+
+.menu-item:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.sub-menu {
+    /* margin-top: 447px; */
+    position: absolute;
+    line-height: 0;
+    border-top: 2px solid #ee344e;
+    display: none;
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif;
+    z-index: 10;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu-item {
+    padding: 27px 37px;
+    background: white;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, .10);
+    font-size: 16px;
+    transition: 0.5s all;
+}
+
+.sub-menu-item:hover {
+    background-color: #EE344E;
+    color: white;
+}
+
+.sub-menu-project {
+    position: absolute;
+    line-height: 0;
+    border-top: 2px solid #ee344e;
+    display: none;
+    font-size: 16px;
+    z-index: 10;
+}
+
+.sub-menu-item-project {
+    padding: 27px 37px;
+    background: white;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, .10);
+    font-size: 16px;
+    transition: 0.5s all;
+}
+
+.sub-menu-item-project:hover {
+    background-color: #EE344E;
+    color: white;
+}
+
+.menu-item:hover .sub-menu-project {
+    display: block;
+}
+
+.my-icon {
+    font-size: 18px;
+    cursor: pointer;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.fa-cart-shopping {
+    /* border: 2px solid black; */
+    border-right: 1px solid;
+    padding: 10px;
+}
+
+/* for full screen search */
+
+.checkbox {
+    display: block;
+}
+
+.search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    transform: translateY(-400px);
+    transition: 0.3s;
+    display: grid;
+    place-items: center;
+}
+
+.second-search {
+    padding: 10px;
+    width: 1200px;
+    height: 100px;
+    font-size: 30px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    text-transform: capitalize;
+    outline: none;
+}
+
+.second-search::placeholder {
+    font-size: 28px;
+    color: white;
+}
+
+.second-search:hover {
+    border-bottom: 2px solid white;
+}
+
+#search {
+    display: none;
+}
+
+#search[type="checkbox"]:checked~.search-bar {
+    /* background-color: #EE344E; */
+    transform: translateY(0px);
+    scale: 1;
+}
+
+.cancel-search {
+    transform: translateX(400px);
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+    scale: 0;
+    z-index: 20000;
+    position: absolute;
+    transition: 0.3s;
+}
+
+#search[type="checkbox"]:checked~label .cancel-search {
+    scale: 1;
+    transform: translateX(400px);
+}
+
+.search-input {
+    width: 80%;
+    padding: 20px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+/* Full screen search bar End Here */
+
+.fa-calendar-days {
+    border-radius: 0%;
+    border: 5px solid white;
+    font-size: 19px;
+    color: white;
+    /* background-color: black; */
+    transform: translate(19px, 0px);
+    border: 7px solid white;
+    color: black;
+    border-radius: 50%;
+    font-size: x-large;
+    background-color: cornsilk;
+}
+
+.make-appointment {
+    background-color: #EE344E;
+    width: 28%;
+    height: 80px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.make-appointment>p {
+    padding: 30px;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+.three-line {
+    font-size: 30px;
+    /* color: black; */
+    transform: translate(124px, -82px);
+}
+
+/* first homepage section */
+
+.homepage {
+    height: 700px;
+    width: 100%;
+    background-image: url(mainhomepage.png);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 49% 94%, 0 100%, 0% 100%, 0% 35%, 0 0);
+}
+
+.my-homepage>img {
+    width: 100%;
+}
+
+.homepage-text {
+    height: 320px;
+    width: 100%;
+    color: black;
+    /* background-color: red; */
+    text-align: center;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.commit {
+    padding: 10px 30px 10px 30px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #ee344e;
+    font-family: math;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: "Nunito Sans", sans-serif;
+    color: white;
+    border-radius: 5px;
+}
+
+.heart-text {
+    /* padding: 10px 25px 10px 25px; */
+    font-size: 65px;
+    text-align: center;
+    width: 800px;
+    font-weight: bolder;
+    /* background-color: #ee344e; */
+    font-family: cursive;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: math;
+    color: white;
+    border-radius: 5px;
+    /* background-color: red; */
+}
+
+.for-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+    gap: 40px;
+    height: auto;
+}
+
+.read-more,
+.contact-us {
+    background-color: white;
+    padding: 18px 38px;
+    border-radius: 5px;
+    font-family: muli;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.5s all;
+    text-transform: uppercase;
+}
+
+.contact-us {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.read-more:hover {
+    cursor: pointer;
+    background-color: #EE344E;
+    color: #fff;
+}
+
+.contact-us:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+/* 2nd page section */
+
+.second-page {
+    height: 600px;
+    width: 100%;
+    /* background-color: gold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-family: "Nunito Sans", sans-serif;
+    transform: translate(0px, -180px);
+    border-bottom: 2px solid aliceblue;
+}
+
+.heart-surgery,
+.valve-diseases,
+.children-services {
+    height: 470px;
+    width: 370px;
+    /* background-color: blue; */
+    border-radius: 10px;
+}
+
+.heart-surgery-text,
+.valve-diseases-text,
+.children-services-text {
+    height: 150px;
+    width: 370px;
+}
+
+.heart-surgery-img {
+    height: 320px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background-image: url(heart\ surgery.jpg);
+    background-size: 100% 100%;
+}
+
+.heart-surgery-text>p {
+    padding: 30px 0px 0px 30px;
+    cursor: pointer;
+    color: #EE344E;
+    font-family: sans-serif;
+    /* font-weight: bold; */
+}
+
+.heart-surgery-text>h1 {
+    padding: 5px 30px 0px;
+    cursor: pointer;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.second-page-icon {
+    width: 370px;
+    font-size: 60px;
+    color: aliceblue;
+    display: flex;
+    justify-content: end;
+    margin: -15px;
+}
+
+.heart-surgery-text:hover {
+    background-color: #EE344E;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.heart-surgery-text:hover>p {
+    color: white;
+}
+
+.valve-diseases-img {
+    height: 320px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background-image: url(valve\ disesae.jpg);
+    background-size: 100% 100%;
+}
+
+.valve-diseases-text>p {
+    padding: 30px 0px 0px 30px;
+    cursor: pointer;
+    color: #EE344E;
+    font-family: sans-serif;
+}
+
+.valve-diseases-text>h1 {
+    padding: 5px 30px 0px;
+    cursor: pointer;
+}
+
+.valve-diseases-text:hover {
+    background-color: #EE344E;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.valve-diseases-text:hover>p {
+    color: white;
+}
+
+/* .children-services */
+
+.children-services-img {
+    height: 320px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background-image: url(childrens\ service.jpg);
+    background-size: 100% 100%;
+}
+
+.children-services-text>p {
+    padding: 30px 0px 0px 30px;
+    cursor: pointer;
+    color: #EE344E;
+    font-family: sans-serif;
+}
+
+.children-services-text>h1 {
+    padding: 5px 30px 0px;
+    cursor: pointer;
+}
+
+.children-services-text:hover {
+    background-color: #EE344E;
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.children-services-text:hover>p {
+    color: white;
+}
+
+/* Third section work starts here */
+
+.third-page {
+    height: 600px;
+    width: 100%;
+    /* background-color: #333; */
+}
+
+.third-page-heading-text {
+    display: grid;
+    place-items: center;
+    /* margin-bottom: 35px; */
+    height: 100px;
+    /* background-color: green; */
+}
+
+.third-page-heading-text>p {
+    font-family: Mulish, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: #ee344e;
+}
+
+.third-page-heading-text>h1 {
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: #273353;
+}
+
+.third-page-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    /* background-color: cyan; */
+}
+
+.left-side {
+    /* background-color: yellow; */
+    height: 500px;
+    width: 25%;
+    display: grid;
+    justify-content: end;
+    /* font-size: 15px; */
+}
+
+.third-page-img {
+    /* background-color: gray; */
+    height: 500px;
+    width: 35%;
+    background-image: url(cardio\ demo.png);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+}
+
+.right-side {
+    /* background-color: green; */
+    height: 500px;
+    width: 25%;
+    display: grid;
+    justify-content: end;
+    /* font-size: 15px; */
+}
+
+.circle-check-icon {
+    /* margin: 5px; */
+}
+
+.fa-circle-check {
+    color: #EE344E;
+    font-size: 35px;
+    margin: 5px;
+    /* background-color: transparent; */
+}
+
+.cardio-monitoring {
+    margin-top: 100px;
+}
+
+.cardio-monitoring,
+.expert-cardiologist,
+.comfort-environment {
+    height: 100px;
+    /* background-color: cyan; */
+    gap: 60px;
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+}
+
+.text {
+    font-weight: 500;
+}
+
+.text>h1 {
+    font-family: "Nunito Sans", sans-serif;
+    color: #273353;
+}
+
+.text>p {
+    font-family: Mulish, sans-serif;
+    padding: 5px;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #9ea1ac;
+}
+
+/* third section Right side */
+
+.oxygen-therapy,
+.septal-mastectomy,
+.coil-embolization {
+    height: 100px;
+    /* background-color: cyan; */
+    gap: 60px;
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+}
+
+.oxygen-therapy {
+    margin-top: 100px;
+}
+
+.right-side {
+    /* background-color: yellow; */
+    height: 500px;
+    width: 25%;
+}
+
+.circle-check-icon {
+    /* margin: 5px; */
+}
+
+.fa-circle-check {
+    color: #EE344E;
+    font-size: 35px;
+    margin: 5px;
+    /* background-color: transparent; */
+}
+
+.oxygen-therapy {
+    margin-top: 100px;
+}
+
+/* Fourth section starts her */
+
+.fourth-page-main {
+    height: 720px;
+    width: 100%;
+    /* background-color: goldenrod; */
+}
+
+.fourth-page-main1 {
+    height: 600px;
+    width: 100%;
+    background-color: #EE344E;
+}
+
+.fourth-page-content {
+    height: 600px;
+    width: 100%;
+    /* background-color: cyan; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side-area {
+    height: 600px;
+    width: 60%;
+    /* background-color: gray; */
+    display: grid;
+    justify-content: space-evenly;
+}
+
+.right-side-area {
+    height: 600px;
+    width: 40%;
+    background-color: #EE344E;
+}
+
+.left-side-area-text {
+    width: 600px;
+    margin-top: 80px;
+    /* background-color: #EE344E; */
+    /* height: 100px; */
+}
+
+.left-side-area-text>p {
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.left-side-area-text>h1 {
+    font-family: math;
+    font-size: 40px;
+    padding: 5px;
+    color: white;
+}
+
+.left-side-area-info {
+    height: 330px;
+    /* width: 50%; */
+    /* background-color: gold; */
+}
+
+.button-areas {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.emergency {
+    height: 70px;
+    width: 206px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.button-area-title {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-areas-icon {
+    font-size: 30px;
+    color: #ee344e;
+}
+
+.fa-truck-medical {
+    color: white;
+}
+
+.button-areas-text {
+    font-size: 15px;
+    color: black;
+    font-family: Mulish, sans-serif;
+    font-weight: 700;
+}
+
+.facilities {
+    height: 70px;
+    width: 206px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.reaction {
+    height: 70px;
+    width: 206px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.be-right-path {
+    height: auto;
+    width: auto;
+    /* background-color: green; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-family: Mulish, sans-serif;
+    gap: 10px;
+}
+
+.be-right-path-img {
+    height: 125px;
+    width: 270px;
+    border-radius: 5px;
+    background-image: url(heart\ surgery.jpg);
+    background-size: cover;
+    padding: 10px;
+    margin: 15px;
+    /* background-position: center; */
+}
+
+.be-right-path-text {
+    width: 310px;
+    /* background-color: cyan; */
+    font-family: Mulish, sans-serif;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.be-right-path-text>p {
+    width: 383px;
+    line-height: 25px;
+}
+
+form h1 {
+    color: white;
+    font-family: math;
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+
+.make-an-appointment-form {
+    height: 550px;
+    width: 440px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #192136;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 150px;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    position: absolute;
+}
+
+::placeholder {
+    font-size: 17px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 330px;
+    padding: 22px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group select {
+    width: 375px;
+    padding: 22px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 17px;
+    color: #0000009e;
+}
+
+.select {
+    width: 330px;
+    padding: 22px;
+}
+
+.form-group textarea {
+    height: 55px;
+    font-size: 17px;
+    color: #0000009e;
+    width: 86%;
+    padding: 10px 30px 30px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.btn-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #EE344E;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: white;
+    color: #ee344e;
+}
+
+/* fourth page main2    -  Starts Here */
+
+.fourth-page-main2 {
+    height: 120px;
+    width: 100%;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourth-page-div {
+    height: 120px;
+    width: 80%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: normal;
+    align-items: end;
+}
+
+.appointment-i {
+    height: 100px;
+    width: 300px;
+    /* background-color: pink; */
+    padding-left: 30px;
+    color: black;
+    padding-right: 20px;
+    display: flex;
+    justify-content: normal;
+    align-items: end;
+}
+
+.fourth-page-main2-icon {
+    font-size: 60px;
+}
+
+.appointment-text {
+    padding: 0px 10px;
+}
+
+.appointment-text>p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    color: #828690;
+}
+
+.appointment-text>h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    color: #273353;
+}
+
+.call-the-hospital-i {
+    height: 100px;
+    width: 300px;
+    /* background-color: pink; */
+    padding-left: 30px;
+    color: black;
+    padding-right: 20px;
+    display: flex;
+    justify-content: normal;
+    align-items: end;
+}
+
+.call-the-hospital-i-text {
+    padding: 0px 10px;
+}
+
+.call-the-hospital-i-text>p {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    color: #828690;
+}
+
+.call-the-hospital-i-text>h2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    color: #273353;
+}
+
+/* Fifth page starts here........................... */
+
+.fifth-page-main {
+    /* background-color: lightgray; */
+    padding: 50px 0px;
+    height: 700px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.fifth-page-main-box {
+    height: 630px;
+    width: 1200px;
+    /* background-color: lightpink; */
+}
+
+.fifth-page-content-box {
+    height: 150px;
+    width: 1200px;
+    /* border: 2px solid black; */
+}
+
+.fifth-page-heading-box {
+    /* height: 120px;
+    width: 1200px; */
+    align-items: center;
+    text-align: center;
+}
+
+.fifth-page-heading-box>h4 {
+    font-size: 13px;
+    font-family: Mulish, sans-serif;
+    padding-bottom: 10px;
+    color: #EE344E;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+}
+
+.fifth-page-heading-box>h2 {
+    font-size: 40px;
+    font-family: math;
+}
+
+.fifth-page-desc-box {
+    /* height: 80px;
+    width: 1200px;  */
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-family: Mulish, sans-serif;
+    text-align: center;
+    color: #9ea1ac;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    padding-top: 15px;
+}
+
+.fifth-page-img-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    width: 1200px;
+}
+
+.circle-img {
+    height: 400px;
+    width: 400px;
+    /* border: 2px solid black; */
+}
+
+.fifth-page-img1-area {
+    height: 270px;
+    width: 280px;
+    border-radius: 50%;
+    background-image: url(Appointment.jpg);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.fifth-page-content-area-1 {
+    display: grid;
+    place-items: center;
+    padding: 0px 29px;
+    font-weight: 700;
+    font-weight: 24px;
+    font-family: math;
+}
+
+.fifth-page-cont-div-1 {
+    text-align: center;
+    font-family: Mulish, sans-serif;
+    color: #9ea1ac;
+    font-size: 16px;
+    /* word-spacing: 2px;
+    letter-spacing: 1px; */
+    padding: 0px 19px;
+}
+
+/* fifth page 2nd */
+
+.fifth-page-heading {
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+.fifth-page-img2-area {
+    height: 270px;
+    width: 280px;
+    border-radius: 50%;
+    background-image: url(Doctor\ Checkup.jpg);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.fifth-page-content-area-2 {
+    display: grid;
+    place-items: center;
+    padding: 0px 29px;
+    font-weight: 700;
+    font-weight: 24px;
+    font-family: math;
+}
+
+.fifth-page-cont-div-2 {
+    text-align: center;
+    font-family: Mulish, sans-serif;
+    color: #9ea1ac;
+    font-size: 16px;
+    /* word-spacing: 2px;
+    letter-spacing: 1px; */
+    padding: 0px 19px;
+}
+
+/* fifth page 3rd */
+
+.fifth-page-img3-area {
+    height: 270px;
+    width: 280px;
+    border-radius: 50%;
+    background-image: url(Manage\ Treatment.jpg);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.fifth-page-content-area-3 {
+    display: grid;
+    place-items: center;
+    padding: 0px 29px;
+    font-weight: 700;
+    font-weight: 24px;
+    font-family: math;
+}
+
+.fifth-page-cont-div-3 {
+    text-align: center;
+    font-family: Mulish, sans-serif;
+    color: #9ea1ac;
+    font-size: 16px;
+    /* word-spacing: 2px;
+    letter-spacing: 1px; */
+    padding: 0px 19px;
+}
+
+/* fifth page 4th */
+
+.fifth-page-img4-area {
+    height: 270px;
+    width: 280px;
+    border-radius: 50%;
+    background-image: url(Enjoy\ The\ Life.jpg);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.fifth-page-content-area-4 {
+    display: grid;
+    place-items: center;
+    padding: 0px 29px;
+    font-weight: 700;
+    font-weight: 24px;
+    font-family: math;
+}
+
+.fifth-page-cont-div-4 {
+    text-align: center;
+    font-family: Mulish, sans-serif;
+    color: #9ea1ac;
+    font-size: 16px;
+    /* word-spacing: 2px;
+    letter-spacing: 1px; */
+    padding: 0px 19px;
+}
+
+.circle-area {
+    box-shadow: 0px 12px 0px 0px rgba(238, 52, 78, .3);
+    transition: 0.8s all;
+}
+
+.circle-area:hover {
+    box-shadow: 0px 12px 0px 0px rgba(233, 3, 34, 0.946);
+}
+
+/* Sixth section starts here */
+
+.sixth-page-main {
+    height: 700px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: #f8f7f4;
+}
+
+.sixth-page-container {
+    height: 500px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    /* background-color: red; */
+}
+
+.box-1 {
+    height: 500px;
+    width: 420px;
+    padding: 0px 15px 30px 15px;
+    border-radius: 6px;
+    /* background-color: #fff; */
+    /* box-shadow: 9px 0 30px 0 rgba(26, 47, 106, .09); */
+    /* border: none; */
+}
+
+.box-1-head>h1 {
+    margin: 0px 0px 15px;
+    padding: -1px 10px;
+    font-size: 13px;
+    font-family: Mulish, sans-serif;
+    color: #EE344E;
+}
+
+.box-1-para {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 45px;
+    color: #273353;
+}
+
+.box-1-para-2 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 17px;
+    color: #9ea1ac;
+    width: 372px;
+    padding: 28px 0px;
+    line-height: 30px;
+}
+
+.d-flex {
+    height: 100px;
+    width: 370px;
+    /* background-color: gray; */
+}
+
+.medical-solution {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ms-icon {
+    border-radius: 50%;
+    height: 95px;
+    width: 140px;
+    display: grid;
+    place-items: center;
+    background-color: #EE344E;
+}
+
+.d-flex-icon {
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.ms-icon-content>h1 {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    margin: 0px 0px 8px 15px;
+}
+
+.d-flex-div-cont {
+    font-family: Mulish, sans-serif;
+    font-family: 16px;
+    margin: 0px 0px 0px 15px;
+    color: #9ea1ac;
+}
+
+.heart-rate-monitor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hrm-icon {
+    border-radius: 50%;
+    height: 95px;
+    width: 140px;
+    display: grid;
+    place-items: center;
+    background-color: #EE344E;
+}
+
+/* sixth section box 2 starts */
+
+.box-2 {
+    height: 500px;
+    width: 360px;
+    padding: 0px 15px 30px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 9px 0 30px 0 rgba(26, 47, 106, .09);
+    border: none;
+}
+
+.box-2-inner {
+    height: 420px;
+    width: 300px;
+    /* background-color: green; */
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.basic-plan {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.price-div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.basic-plan-currency,
+.basic-plan-price,
+.basic-plan-month {
+    color: #EE344E;
+    font-weight: 700;
+}
+
+.basic-plan-currency {
+    font-size: 25px;
+    font-family: Mulish, sans-serif;
+    position: relative;
+    top: -5px;
+}
+
+.basic-plan-price {
+    font-size: 45px;
+    font-family: Mulish, sans-serif;
+}
+
+.basic-plan-month {
+    font-size: 11px;
+    font-family: Mulish, sans-serif;
+    position: relative;
+    bottom: -10px;
+}
+
+.basic-plan-price-box {
+    padding: 30px 0px 0px 0px;
+    /* background-color: wheat; */
+    height: 300px;
+    width: 300px;
+    border-top: 1px solid rgb(25 33 54 / 10%);
+}
+
+.fa-check {
+    font-size: larger;
+}
+
+.check-icon {
+    display: flex;
+    gap: 15px;
+    padding: 12px;
+}
+
+.check-text {
+    font-size: 16px;
+    font-family: Mulish, sans-serif;
+    color: #9ea1ac;
+}
+
+.price-box-btn {
+    width: 300px;
+    background: black;
+    height: 60px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    margin-top: 35px;
+}
+
+.price-box-btn>a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s all;
+    font-weight: bold;
+}
+
+.price-box-btn a:hover {
+    color: #EE344E;
+}
+
+/* sixth section third box start */
+
+.box-3 {
+    height: 500px;
+    width: 360px;
+    padding: 0px 15px 30px 15px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EE344E;
+    box-shadow: 9px 0 30px 0 rgba(26, 47, 106, .09);
+    border: none;
+}
+
+.box-3-inner {
+    height: 420px;
+    width: 300px;
+    /* background-color: green; */
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.box-3-basic-plan {
+    font-size: 25px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.box-3-price-div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.box-3-basic-plan-currency,
+.box-3-basic-plan-price,
+.box-3-basic-plan-month {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.box-3-basic-plan-currency {
+    font-size: 25px;
+    font-family: Mulish, sans-serif;
+    position: relative;
+    top: -5px;
+}
+
+.box-3-basic-plan-price {
+    font-size: 45px;
+    font-family: Mulish, sans-serif;
+}
+
+.box-3-basic-plan-month {
+    font-size: 11px;
+    font-family: Mulish, sans-serif;
+    position: relative;
+    bottom: -10px;
+}
+
+.box-3-basic-plan-price-box {
+    padding: 30px 0px 0px 0px;
+    /* background-color: wheat; */
+    height: 300px;
+    width: 300px;
+    border-top: 1px solid rgb(25 33 54 / 4%);
+}
+
+.box-3-check-icon i {
+    font-size: larger;
+    color: black;
+}
+
+.box-3-check-icon {
+    display: flex;
+    gap: 15px;
+    padding: 12px;
+    color: #FFFFFF;
+}
+
+.box-3-check-text {
+    font-size: 16px;
+    font-family: Mulish, sans-serif;
+    color: #FFFFFF;
+}
+
+.price-box-btn {
+    width: 300px;
+    background: black;
+    height: 60px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    margin-top: 35px;
+}
+
+.price-box-btn>a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s all;
+    font-weight: bold;
+}
+
+.price-box-btn a:hover {
+    color: #EE344E;
+}
+
+/* Seventh section starts */
+
+.seventh-page-main {
+    height: 800px;
+    width: 100%;
+    border-top: 1px solid #9ea1ac;
+    display: grid;
+    place-items: center;
+}
+
+.seventh-page-container {
+    height: 750px;
+    width: 1200px;
+    /* background-color: red; */
+}
+
+.seventh-page-content {
+    height: 140px;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: grey; */
+    margin-top: 25px;
+}
+
+.seventh-page-headings {
+    height: 80px;
+    width: 600px;
+    font-family: Mulish, sans-serif;
+    /* color: #EE344E; */
+    font-size: 13px;
+}
+
+.seventh-page-headings>h4 {
+    font-size: 13px;
+    font-family: Mulish, sans-serif;
+    color: #EE344E;
+    /* padding: 15px 0px; */
+}
+
+.seventh-page-headings>h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: math;
+    color: black;
+    padding: 15px 0px;
+}
+
+.seventh-page-para {
+    height: 80px;
+    width: 600px;
+    font-family: Mulish, sans-serif;
+    font-size: 16px;
+    color: #9ea1ac;
+}
+
+.seventh-page-para>p {
+    padding: 36px 0px;
+}
+
+.seventh-page-card {
+    height: 650px;
+    width: 1200px;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.seventh-page-card-1,
+.seventh-page-card-2,
+.seventh-page-card-3 {
+    height: 600px;
+    width: 370px;
+    /* border: 2px solid; */
+    border-radius: 1px;
+    display: grid;
+    place-items: center;
+}
+
+.card-1-first-phase {
+    background-image: url(card-1.jpg);
+    height: 305px;
+    width: 370px;
+    background-size: 100% 100%;
+    border-radius: 7px;
+}
+
+.card-1-second-phase {
+    height: 260px;
+    width: 350px;
+    background-color: #FFFFFF;
+    margin-left: 10px;
+    margin-right: 10px;
+    top: -20px;
+    position: relative;
+    border-radius: 7px;
+    padding-top: 30px;
+}
+
+.admin-and-comments {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: Mulish, sans-serif;
+    color: #EE344E;
+}
+
+.admin,
+.comments {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.admin {
+    cursor: pointer;
+}
+
+.second-phase-content {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    /* background-color: red; */
+    padding: 20px 0px;
+    gap: 20px;
+}
+
+.second-phase-content>h1 {
+    font-family: "Nunito Sans", sans-serif;
+    color: #273353;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.second-phase-content>h1:hover {
+    color: #EE344E;
+    transition: 0.2s all;
+}
+
+.second-phase-content>p {
+    font-family: Mulish, sans-serif;
+    color: #9ea1ac;
+    font-size: 16px;
+    padding: 0px 55px 0px 55px;
+    line-height: 25px;
+}
+
+.second-phase-read-more {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: Mulish, sans-serif;
+    font-size: 14px;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.second-phase-read-more:hover {
+    color: #EE344E;
+}
+
+.greater-than {
+    height: 20px;
+    width: 20px;
+    background: #EE344E;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.fa-greater-than {
+    font-size: 8px;
+    color: white;
+}
+
+/* card 2  */
+
+.card-2-first-phase {
+    background-image: url(card-2.jpg);
+    height: 305px;
+    width: 370px;
+    background-size: 100% 100%;
+    border-radius: 7px;
+}
+
+.card-2-second-phase {
+    height: 260px;
+    width: 350px;
+    background-color: #FFFFFF;
+    margin-left: 10px;
+    margin-right: 10px;
+    top: -20px;
+    position: relative;
+    border-radius: 7px;
+    padding-top: 30px;
+}
+
+.second-phase-content {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    /* background-color: red; */
+    padding: 20px 0px;
+    gap: 20px;
+}
+
+.second-phase-content>h1 {
+    font-family: "Nunito Sans", sans-serif;
+    color: #273353;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.second-phase-content>h1:hover {
+    color: #EE344E;
+    transition: 0.2s all;
+}
+
+.second-phase-content>p {
+    font-family: Mulish, sans-serif;
+    color: #9ea1ac;
+    font-size: 16px;
+    padding: 0px 55px 0px 55px;
+    line-height: 25px;
+}
+
+.second-phase-read-more {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: Mulish, sans-serif;
+    font-size: 14px;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.second-phase-read-more:hover {
+    color: #EE344E;
+}
+
+.greater-than {
+    height: 20px;
+    width: 20px;
+    background: #EE344E;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.fa-greater-than {
+    font-size: 8px;
+    color: white;
+}
+
+/* 3rd card */
+
+.card-3-first-phase {
+    background-image: url(card-3.jpg);
+    height: 305px;
+    width: 370px;
+    background-size: 100% 100%;
+    border-radius: 7px;
+}
+
+.card-3-second-phase {
+    height: 260px;
+    width: 350px;
+    background-color: #FFFFFF;
+    margin-left: 10px;
+    margin-right: 10px;
+    top: -20px;
+    position: relative;
+    border-radius: 7px;
+    padding-top: 30px;
+}
+
+.second-phase-content {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    /* background-color: red; */
+    padding: 20px 0px;
+    gap: 20px;
+}
+
+.second-phase-content>h1 {
+    font-family: "Nunito Sans", sans-serif;
+    color: #273353;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.second-phase-content>h1:hover {
+    color: #EE344E;
+    transition: 0.2s all;
+}
+
+.second-phase-content>p {
+    font-family: Mulish, sans-serif;
+    color: #9ea1ac;
+    font-size: 16px;
+    padding: 0px 55px 0px 55px;
+    line-height: 25px;
+}
+
+.second-phase-read-more {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-family: Mulish, sans-serif;
+    font-size: 14px;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.second-phase-read-more:hover {
+    color: #EE344E;
+}
+
+.greater-than {
+    height: 20px;
+    width: 20px;
+    background: #EE344E;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.fa-greater-than {
+    font-size: 8px;
+    color: white;
+}
+
+/* eight section starts */
+
+.eight-main-container {
+    height: 550px;
+    width: 100%;
+    background-color: #f8f7f4;
+    /* background-color: lightseagreen; */
+}
+
+.eight-container {
+    height: 150px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.container-first-box {
+    height: 150px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid #c6c8ce;
+}
+
+.cardioly-img,
+.clinic-add,
+.phone-no,
+.footer-social-logo {
+    height: 60px;
+    width: 230px;
+}
+
+.cardioly-img {
+    background-image: url(cardiologist-logo.png);
+    background-size: 100% 100%;
+}
+
+.clinic-add {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+.add-icon {
+    border-radius: 50%;
+    width: 55px;
+    background: #EE344E;
+    height: 55px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    color: white;
+}
+
+.add-details {
+    width: auto;
+    height: 60px;
+    padding-left: 5px;
+}
+
+.add-details>h1 {
+    font-size: 18px;
+    font-family: Mulish, sans-serif;
+    color: #0c263bf2;
+    padding: 5px 0px;
+    font-weight: 600;
+}
+
+.add-details>p {
+    font-size: 15px;
+    font-family: Mulish, sans-serif;
+    font-weight: 300;
+    /* padding-top: 2px; */
+}
+
+.phone-no {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.phoneno-details {
+    width: auto;
+    height: 60px;
+    padding-left: 5px;
+}
+
+.phoneno-details>h1 {
+    font-size: 18px;
+    font-family: Mulish, sans-serif;
+    color: #0c263bf2;
+    padding: 5px 0px;
+    font-weight: 600;
+}
+
+.phoneno-details>p {
+    font-size: 15px;
+    font-family: Mulish, sans-serif;
+    font-weight: 300;
+    /* padding-top: 2px; */
+}
+
+.footer-social-logo {
+    /* background-color: lightcoral; */
+    width: 250px;
+    display: grid;
+}
+
+.footer-social-media {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.social-media {
+    font-size: 15px;
+    padding: 10px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.social-media:hover {
+    background-color: #EE344E;
+    color: #fff;
+}
+
+.eight-container-second-box {
+    width: 100%;
+    height: 450px;
+    display: grid;
+    place-items: center;
+}
+
+.eight-container-parent {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    /* gap: 30px; */
+}
+
+.information-box,
+.latest-news-box,
+.news-letter-box,
+.opening-hours-box {
+    height: 330px;
+    width: 330px;
+}
+
+.footer-titles {
+    font-size: 18px;
+    font-family: system-ui;
+    padding-bottom: 40px;
+}
+
+.for-info-menu {
+    height: auto;
+}
+
+.ul-menu {
+    /* display: inline-block; */
+}
+
+.li-menu {
+    padding: 10px 0px;
+    float: left;
+    width: 50%;
+}
+
+.li-menu a {
+    text-decoration: none;
+    font-family: Mulish, sans-serif;
+    font-size: 15px;
+    color: #192136;
+}
+
+.span-li {
+    margin-right: 10px;
+    color: #192136;
+}
+
+.latest-news-queries {
+    height: 175px;
+    width: 300px;
+}
+
+.query-1,
+.query-2 {
+    /* height: 175px;
+    width: 300px; */
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.query-logo-1 {
+    background-image: url(card-1.jpg);
+    background-size: 100% 100%;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    padding-right: 15px;
+}
+
+.query-content {
+    padding-left: 15px;
+}
+
+.query-content>p {
+    padding-bottom: 10px;
+    font-size: 15px;
+    width: 210px;
+    font-family: Mulish, sans-serif;
+}
+
+.query-logo-2 {
+    background-image: url(card-2.jpg);
+    background-size: 100% 100%;
+    height: 75px;
+    width: 90px;
+    border-radius: 50%;
+    padding-right: 15px;
+}
+
+.for-newsletter>p {
+    font-family: Mulish, sans-serif;
+    font-size: 15px;
+    color: #192136;
+    line-height: 22px;
+}
+
+.newsletter-input {
+    width: 250px;
+    height: 40px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: 0px;
+    font-family: Mulish, sans-serif;
+    margin-top: 15px;
+}
+
+.newsletter-input::placeholder {
+    padding: 10px;
+    color: #828690;
+    font-weight: 200;
+}
+
+.newsletter-btn {
+    height: 45px;
+    width: 130px;
+    background-color: #192136;
+    color: #fff;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: system-ui;
+    font-size: 18px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.newsletter-btn:hover {
+    background-color: #EE344E;
+}
+
+.opening-hour-li-menu {
+    padding: 10px 0px;
+    float: left;
+    width: 50%;
+    font-family: Mulish, sans-serif;
+    font-size: 15px;
+}
+
+.opening-hour-li-menu a {
+    text-decoration: none;
+    color: #192136;
+}
+
+.opening-hour-li-menu:nth-child(even) {
+    color: #EE344E;
+}
+
+/* Footer starts here */
+
+footer {
+    height: 80px;
+    width: 100%;
+    background-color: #EE344E;
+}
+
+.footer-container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-copyright {
+    width: auto;
+    /* background-color: lavenderblush; */
+}
+
+.footer-copyright h3 {
+    font-family: Mulish, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.footer-menu {
+    width: 400px;
+}
+
+.footer-ul {
+    display: flex;
+}
+
+.footer-li {
+    padding: 0px 20px;
+}
+
+.footer-li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Mulish, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* MEDIA QUERY STARTS HERE */
+
+/* ============================================================
+   FULLY RESPONSIVE CSS - NO HTML CHANGES REQUIRED
+   ============================================================ */
+
+/* Large screens (1025px - 1200px) */
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        width: 18%;
+    }
+
+    nav {
+        width: 58%;
+    }
+
+    .menu {
+        gap: 20px;
+        font-size: 15px;
+    }
+
+    .make-appointment {
+        width: 22%;
+        height: 70px;
+    }
+
+    .make-appointment>p {
+        padding: 20px;
+    }
+
+    /* second page */
+    .second-page {
+        gap: 25px;
+        transform: translate(0px, -150px);
+        flex-wrap: wrap;
+        height: auto;
+        padding: 0 20px 30px;
+    }
+
+    .heart-surgery,
+    .valve-diseases,
+    .children-services {
+        width: 320px;
+        height: 450px;
+    }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text {
+        width: 320px;
+    }
+
+    .second-page-icon {
+        width: 320px;
+    }
+
+    /* third page */
+    .third-page {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .third-page-center {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .left-side,
+    .right-side {
+        width: 30%;
+        height: auto;
+    }
+
+    .third-page-img {
+        width: 40%;
+        height: 400px;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .cardio-monitoring,
+    .oxygen-therapy {
+        margin-top: 40px;
+    }
+
+    /* fourth page */
+    .left-side-area-text {
+        width: 90%;
+        margin-top: 40px;
+    }
+
+    .left-side-area-text>h1 {
+        font-size: 32px;
+    }
+
+    .button-areas {
+        flex-wrap: wrap;
+    }
+
+    .emergency,
+    .facilities,
+    .reaction {
+        width: 180px;
+    }
+
+    .be-right-path-text>p {
+        width: auto;
+    }
+
+    .make-an-appointment-form {
+        margin-right: 30px;
+        width: 400px;
+        height: 520px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        width: 300px;
+    }
+
+    .form-group select {
+        width: 340px;
+    }
+
+    /* fifth page */
+    .fifth-page-main-box,
+    .fifth-page-content-box,
+    .fifth-page-img-area {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .fifth-page-img-area {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .circle-img {
+        width: 45%;
+        height: auto;
+    }
+
+    /* sixth page */
+    .sixth-page-container {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .box-1 {
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+    }
+
+    .box-2,
+    .box-3 {
+        width: 45%;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .box-1-para-2 {
+        width: 100%;
+    }
+
+    .d-flex {
+        width: 100%;
+        height: auto;
+    }
+
+    /* seventh page */
+    .seventh-page-main {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .seventh-page-container {
+        width: 100%;
+        height: auto;
+        padding: 0 20px;
+    }
+
+    .seventh-page-content {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 0;
+    }
+
+    .seventh-page-headings {
+        width: 100%;
+        height: auto;
+    }
+
+    .seventh-page-para {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .seventh-page-para>p {
+        padding: 10px 0;
+    }
+
+    .seventh-page-card {
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        gap: 25px;
+    }
+
+    .seventh-page-card-1,
+    .seventh-page-card-2,
+    .seventh-page-card-3 {
+        width: 320px;
+        height: auto;
+        min-height: 550px;
+    }
+
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase {
+        width: 320px;
+        height: 260px;
+    }
+
+    .card-1-second-phase,
+    .card-2-second-phase,
+    .card-3-second-phase {
+        width: 300px;
+        height: auto;
+        min-height: 240px;
+    }
+
+    /* eight section */
+    .eight-main-container {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .eight-container {
+        height: auto;
+    }
+
+    .container-first-box {
+        width: 90%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .cardioly-img,
+    .clinic-add,
+    .phone-no,
+    .footer-social-logo {
+        width: 200px;
+        height: auto;
+    }
+
+    .eight-container-second-box {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .eight-container-parent {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .information-box,
+    .latest-news-box,
+    .news-letter-box,
+    .opening-hours-box {
+        width: 45%;
+        height: auto;
+        min-height: 280px;
+    }
+
+    /* footer */
+    footer {
+        height: auto;
+    }
+
+    .footer-container {
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .footer-menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Tablet screens (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 0 15px;
+        height: 70px;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    .logo>img {
+        height: 35px;
+    }
+
+    nav {
+        width: 55%;
+    }
+
+    .menu {
+        gap: 15px;
+        font-size: 14px;
+        line-height: 70px;
+    }
+
+    .make-appointment {
+        width: 25%;
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .make-appointment>p {
+        padding: 15px;
+    }
+
+    /* homepage */
+    .homepage {
+        height: 550px;
+        clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 49% 94%, 0 100%, 0% 100%, 0% 35%, 0 0);
+    }
+
+    .homepage-text {
+        height: auto;
+        margin-bottom: 60px;
+        padding: 20px;
+    }
+
+    .heart-text {
+        font-size: 48px;
+        width: 90%;
+    }
+
+    .commit {
+        font-size: 13px;
+        padding: 8px 25px;
+    }
+
+    /* second page */
+    .second-page {
+        transform: translate(0px, -100px);
+        gap: 20px;
+        padding: 0 15px 20px;
+    }
+
+    .heart-surgery,
+    .valve-diseases,
+    .children-services {
+        width: 280px;
+        height: 420px;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        height: 280px;
+    }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text {
+        width: 280px;
+        height: 140px;
+    }
+
+    .second-page-icon {
+        width: 280px;
+        font-size: 50px;
+    }
+
+    .heart-surgery-text>p,
+    .valve-diseases-text>p,
+    .children-services-text>p {
+        padding: 20px 0px 0px 20px;
+        font-size: 13px;
+    }
+
+    .heart-surgery-text>h1,
+    .valve-diseases-text>h1,
+    .children-services-text>h1 {
+        padding: 5px 20px 0px;
+        font-size: 20px;
+    }
+
+    /* third page */
+    .third-page-heading-text>h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .third-page-center {
+        padding: 0 15px;
+    }
+
+    .left-side,
+    .right-side {
+        width: 28%;
+    }
+
+    .third-page-img {
+        width: 38%;
+        height: 350px;
+    }
+
+    .text>h1 {
+        font-size: 18px;
+    }
+
+    .text>p {
+        font-size: 14px;
+    }
+
+    .fa-circle-check {
+        font-size: 28px;
+    }
+
+    /* fourth page */
+    .fourth-page-main {
+        height: auto;
+    }
+
+    .fourth-page-main1 {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .fourth-page-content {
+        height: auto;
+        flex-direction: column;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .left-side-area {
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .right-side-area {
+        width: 100%;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+    }
+
+    .left-side-area-text {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .left-side-area-text>h1 {
+        font-size: 30px;
+    }
+
+    .left-side-area-info {
+        height: auto;
+    }
+
+    .make-an-appointment-form {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        padding: 25px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .form-group select {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .form-group textarea {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .fourth-page-main2 {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .fourth-page-div {
+        width: 90%;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .appointment-i,
+    .call-the-hospital-i {
+        width: 250px;
+        height: auto;
+        padding: 15px 20px;
+        align-items: center;
+    }
+
+    .fourth-page-main2-icon {
+        font-size: 40px;
+    }
+
+    /* fifth page */
+    .fifth-page-main {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .fifth-page-main-box {
+        height: auto;
+        padding: 0 20px;
+    }
+
+    .fifth-page-content-box {
+        height: auto;
+        width: 100%;
+    }
+
+    .fifth-page-heading-box>h2 {
+        font-size: 32px;
+    }
+
+    .fifth-page-desc-box {
+        padding: 10px 0;
+    }
+
+    .fifth-page-img-area {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .circle-img {
+        width: 45%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .fifth-page-img1-area,
+    .fifth-page-img2-area,
+    .fifth-page-img3-area,
+    .fifth-page-img4-area {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 15px;
+    }
+
+    .fifth-page-content-area-1,
+    .fifth-page-content-area-2,
+    .fifth-page-content-area-3,
+    .fifth-page-content-area-4 {
+        padding: 0 10px;
+    }
+
+    /* sixth page */
+    .sixth-page-main {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .sixth-page-container {
+        padding: 0 20px;
+    }
+
+    .box-1 {
+        max-width: 100%;
+        padding: 0 10px 20px;
+    }
+
+    .box-2,
+    .box-3 {
+        width: 48%;
+        min-height: 480px;
+        padding: 20px 15px 30px;
+    }
+
+    .box-2-inner,
+    .box-3-inner {
+        width: 100%;
+        height: auto;
+    }
+
+    .basic-plan-price-box,
+    .box-3-basic-plan-price-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .price-box-btn {
+        width: 100%;
+    }
+
+    .ms-icon,
+    .hrm-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+    }
+
+    /* seventh page */
+    .seventh-page-card-1,
+    .seventh-page-card-2,
+    .seventh-page-card-3 {
+        width: 300px;
+    }
+
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase {
+        width: 300px;
+        height: 240px;
+    }
+
+    .card-1-second-phase,
+    .card-2-second-phase,
+    .card-3-second-phase {
+        width: 280px;
+    }
+
+    .second-phase-content>p {
+        padding: 0 30px;
+    }
+
+    /* eight section */
+    .information-box,
+    .latest-news-box,
+    .news-letter-box,
+    .opening-hours-box {
+        width: 48%;
+    }
+
+    .latest-news-queries {
+        width: 100%;
+        height: auto;
+    }
+
+    .query-content>p {
+        width: auto;
+    }
+
+    .query-logo-1,
+    .query-logo-2 {
+        width: 65px;
+        height: 65px;
+        flex-shrink: 0;
+    }
+
+    .newsletter-input {
+        width: 100%;
+    }
+
+    .newsletter-btn {
+        width: 100%;
+    }
+}
+
+/* Small tablet / large mobile (600px - 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        height: auto;
+        min-height: 60px;
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .logo {
+        width: auto;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+    .logo>img {
+        height: 32px;
+    }
+
+    nav {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    #mobile-menu-toggle:checked~nav {
+        display: flex;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 8px;
+        margin-left: auto;
+        order: 2;
+    }
+
+    .mobile-menu-button span {
+        width: 28px;
+        height: 3px;
+        background: #333;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+
+    #mobile-menu-toggle:checked~.mobile-menu-button span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #mobile-menu-toggle:checked~.mobile-menu-button span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu-toggle:checked~.mobile-menu-button span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        line-height: 45px;
+        font-size: 15px;
+    }
+
+    .menu-item {
+        width: 100%;
+        line-height: 45px;
+        border-bottom: 1px solid #f0f0f0;
+        padding: 0 10px;
+        position: relative;
+    }
+
+    .sub-menu,
+    .sub-menu-project {
+        position: static;
+        width: 100%;
+        border-top: none;
+        display: none;
+        box-shadow: none;
+    }
+
+    .menu-item:hover .sub-menu,
+    .menu-item:hover .sub-menu-project {
+        display: block;
+    }
+
+    .sub-menu-item,
+    .sub-menu-item-project {
+        padding: 12px 20px;
+        font-size: 14px;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    nav>.my-icon {
+        margin: 5px 10px;
+    }
+
+    nav>hr {
+        display: none;
+    }
+
+    .make-appointment {
+        width: auto;
+        height: 45px;
+        padding: 0 15px;
+        font-size: 13px;
+        margin-left: auto;
+        order: 3;
+    }
+
+    .make-appointment>p {
+        padding: 10px 5px;
+        font-size: 13px;
+    }
+
+    /* homepage */
+    .homepage {
+        height: 450px;
+        margin-top: 60px;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    }
+
+    .homepage-text {
+        height: auto;
+        margin-bottom: 30px;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .heart-text {
+        font-size: 36px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .commit {
+        font-size: 12px;
+        padding: 6px 20px;
+    }
+
+    .read-more,
+    .contact-us {
+        padding: 12px 28px;
+        font-size: 13px;
+    }
+
+    .for-button {
+        gap: 15px;
+    }
+
+    /* second page */
+    .second-page {
+        transform: translate(0, -60px);
+        padding: 0 10px 20px;
+        gap: 15px;
+        height: auto;
+        border-bottom: none;
+    }
+
+    .heart-surgery,
+    .valve-diseases,
+    .children-services {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        height: 220px;
+    }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text {
+        width: 100%;
+        height: auto;
+        min-height: 130px;
+    }
+
+    .second-page-icon {
+        width: 100%;
+        font-size: 40px;
+        margin: -10px 0 0;
+    }
+
+    /* third page */
+    .third-page {
+        padding: 20px 10px 30px;
+    }
+
+    .third-page-heading-text {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .third-page-heading-text>h1 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .third-page-center {
+        flex-direction: column;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .left-side,
+    .right-side {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .third-page-img {
+        width: 100%;
+        height: 250px;
+        background-size: contain;
+    }
+
+    .cardio-monitoring,
+    .oxygen-therapy {
+        margin-top: 0;
+    }
+
+    .cardio-monitoring,
+    .expert-cardiologist,
+    .comfort-environment,
+    .oxygen-therapy,
+    .septal-mastectomy,
+    .coil-embolization {
+        height: auto;
+        min-height: 80px;
+        padding: 8px 12px;
+    }
+
+    .text>h1 {
+        font-size: 17px;
+    }
+
+    .text>p {
+        font-size: 14px;
+    }
+
+    .fa-circle-check {
+        font-size: 26px;
+        margin-top: 0;
+    }
+
+    /* fourth page */
+    .fourth-page-main {
+        padding: 20px 0 0;
+    }
+
+    .fourth-page-main1 {
+        padding: 20px 0;
+        border-radius: 0;
+    }
+
+    .fourth-page-content {
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .left-side-area-text>h1 {
+        font-size: 26px;
+    }
+
+    .button-areas {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .emergency,
+    .facilities,
+    .reaction {
+        width: calc(50% - 5px);
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .be-right-path {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+    }
+
+    .be-right-path-img {
+        width: 100%;
+        height: 150px;
+        margin: 0;
+    }
+
+    .be-right-path-text {
+        width: 100%;
+    }
+
+    .be-right-path-text>p {
+        width: 100%;
+    }
+
+    .make-an-appointment-form {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    form h1 {
+        font-size: 24px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+        padding: 14px 16px;
+        font-size: 15px;
+    }
+
+    .form-group textarea {
+        height: 70px;
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+
+    .btn-submit {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .fourth-page-div {
+        width: 100%;
+        padding: 0 15px;
+        gap: 15px;
+    }
+
+    .appointment-i,
+    .call-the-hospital-i {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 18px;
+    }
+
+    .fourth-page-main2-icon {
+        font-size: 32px;
+    }
+
+    .appointment-text>h2,
+    .call-the-hospital-i-text>h2 {
+        font-size: 17px;
+    }
+
+    /* fifth page */
+    .fifth-page-main {
+        padding: 30px 0;
+    }
+
+    .fifth-page-main-box {
+        padding: 0 10px;
+    }
+
+    .fifth-page-heading-box>h2 {
+        font-size: 28px;
+    }
+
+    .fifth-page-desc-box {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    .fifth-page-desc-box br {
+        display: none;
+    }
+
+    .fifth-page-img-area {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 10px 0;
+    }
+
+    .circle-img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .fifth-page-img1-area,
+    .fifth-page-img2-area,
+    .fifth-page-img3-area,
+    .fifth-page-img4-area {
+        width: 160px;
+        height: 160px;
+    }
+
+    .fifth-page-heading {
+        font-size: 18px;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .fifth-page-cont-div-1,
+    .fifth-page-cont-div-2,
+    .fifth-page-cont-div-3,
+    .fifth-page-cont-div-4 {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+    /* sixth page */
+    .sixth-page-main {
+        padding: 30px 0;
+    }
+
+    .sixth-page-container {
+        padding: 0 15px;
+        gap: 25px;
+    }
+
+    .box-1 {
+        padding: 0 5px 15px;
+    }
+
+    .box-1-para {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .box-1-para-2 {
+        font-size: 15px;
+        padding: 15px 0;
+        line-height: 26px;
+    }
+
+    .box-2,
+    .box-3 {
+        width: 100%;
+        max-width: 400px;
+        min-height: 450px;
+        padding: 20px 15px;
+    }
+
+    .box-2-inner,
+    .box-3-inner {
+        height: auto;
+    }
+
+    .basic-plan,
+    .box-3-basic-plan {
+        font-size: 22px;
+    }
+
+    .basic-plan-price,
+    .box-3-basic-plan-price {
+        font-size: 38px;
+    }
+
+    .d-flex {
+        height: auto;
+    }
+
+    .medical-solution,
+    .heart-rate-monitor {
+        justify-content: flex-start;
+    }
+
+    .ms-icon,
+    .hrm-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+
+    .ms-icon-content>h1 {
+        font-size: 17px;
+        margin: 0 0 4px 12px;
+    }
+
+    .d-flex-div-cont {
+        font-size: 13px;
+        margin: 0 0 0 12px;
+    }
+
+    .check-icon,
+    .box-3-check-icon {
+        padding: 8px 0;
+    }
+
+    .check-text,
+    .box-3-check-text {
+        font-size: 14px;
+    }
+
+    .price-box-btn {
+        height: 50px;
+        margin-top: 25px;
+    }
+
+    /* seventh page */
+    .seventh-page-main {
+        padding: 30px 0;
+    }
+
+    .seventh-page-container {
+        padding: 0 15px;
+    }
+
+    .seventh-page-content {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .seventh-page-headings>h2 {
+        font-size: 28px;
+        padding: 10px 0;
+    }
+
+    .seventh-page-headings>h4 {
+        font-size: 12px;
+    }
+
+    .seventh-page-para {
+        font-size: 14px;
+    }
+
+    .seventh-page-para>p {
+        padding: 5px 0;
+    }
+
+    .seventh-page-card {
+        gap: 25px;
+        padding: 10px 0;
+    }
+
+    .seventh-page-card-1,
+    .seventh-page-card-2,
+    .seventh-page-card-3 {
+        width: 100%;
+        max-width: 370px;
+        min-height: auto;
+    }
+
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase {
+        width: 100%;
+        height: 200px;
+    }
+
+    .card-1-second-phase,
+    .card-2-second-phase,
+    .card-3-second-phase {
+        width: calc(100% - 20px);
+        min-height: 220px;
+        padding: 15px;
+        margin: -15px 10px 0;
+    }
+
+    .second-phase-content>h1 {
+        font-size: 20px;
+    }
+
+    .second-phase-content>p {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+
+    .admin-and-comments {
+        font-size: 12px;
+        justify-content: space-around;
+    }
+
+    .admin,
+    .comments {
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    .second-phase-read-more {
+        font-size: 13px;
+    }
+
+    /* eight section */
+    .eight-main-container {
+        padding: 20px 0;
+    }
+
+    .container-first-box {
+        width: 100%;
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .cardioly-img {
+        width: 150px;
+        height: 45px;
+    }
+
+    .clinic-add,
+    .phone-no {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .footer-social-logo {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .footer-social-media {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .social-media {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .eight-container-second-box {
+        padding: 15px 0;
+    }
+
+    .eight-container-parent {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .information-box,
+    .latest-news-box,
+    .news-letter-box,
+    .opening-hours-box {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        min-height: 200px;
+        padding: 10px 0;
+    }
+
+    .footer-titles {
+        padding-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .li-menu {
+        padding: 6px 0;
+        float: none;
+        width: 100%;
+    }
+
+    .li-menu a {
+        font-size: 14px;
+    }
+
+    .latest-news-queries {
+        height: auto;
+        width: 100%;
+    }
+
+    .query-1,
+    .query-2 {
+        padding-bottom: 10px;
+    }
+
+    .query-logo-1,
+    .query-logo-2 {
+        width: 55px;
+        height: 55px;
+    }
+
+    .query-content>p {
+        font-size: 14px;
+        width: auto;
+    }
+
+    .newsletter-input {
+        height: 38px;
+        padding: 8px 12px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .newsletter-btn {
+        height: 40px;
+        font-size: 15px;
+        margin-top: 10px;
+        padding: 8px;
+    }
+
+    .opening-hour-li-menu {
+        padding: 6px 0;
+        font-size: 14px;
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .add-details>h1,
+    .phoneno-details>h1 {
+        font-size: 16px;
+        padding: 3px 0;
+    }
+
+    .add-details>p,
+    .phoneno-details>p {
+        font-size: 13px;
+    }
+
+    .add-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    /* footer */
+    footer {
+        padding: 15px 0;
+    }
+
+    .footer-container {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .footer-copyright h3 {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .footer-li {
+        padding: 0 12px;
+    }
+
+    .footer-li a {
+        font-size: 13px;
+    }
+
+    .footer-ul {
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+/* Mobile screens (up to 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 8px 12px;
+        min-height: 55px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .logo>img {
+        height: 28px;
+    }
+
+    .make-appointment {
+        height: 38px;
+        padding: 0 12px;
+        font-size: 11px;
+    }
+
+    .make-appointment>p {
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+
+    .mobile-menu-button {
+        padding: 5px;
+    }
+
+    .mobile-menu-button span {
+        width: 24px;
+        height: 2.5px;
+    }
+
+    .menu {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+    .menu-item {
+        line-height: 40px;
+        padding: 0 8px;
+        font-size: 14px;
+    }
+
+    .sub-menu-item,
+    .sub-menu-item-project {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    /* homepage */
+    .homepage {
+        height: 380px;
+        min-height: 350px;
+        margin-top: 55px;
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+    }
+
+    .homepage-text {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .heart-text {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .commit {
+        font-size: 10px;
+        padding: 5px 16px;
+        letter-spacing: 1px;
+    }
+
+    .read-more,
+    .contact-us {
+        padding: 10px 20px;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+    .for-button {
+        gap: 10px;
+    }
+
+    /* second page */
+    .second-page {
+        transform: translate(0, -40px);
+        padding: 0 8px 15px;
+        gap: 12px;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        height: 180px;
+    }
+
+    .heart-surgery-text>p,
+    .valve-diseases-text>p,
+    .children-services-text>p {
+        padding: 15px 0px 0px 15px;
+        font-size: 12px;
+    }
+
+    .heart-surgery-text>h1,
+    .valve-diseases-text>h1,
+    .children-services-text>h1 {
+        padding: 3px 15px 0px;
+        font-size: 18px;
+    }
+
+    .second-page-icon {
+        font-size: 32px;
+    }
+
+    /* third page */
+    .third-page {
+        padding: 15px 8px 20px;
+    }
+
+    .third-page-heading-text>h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .third-page-heading-text>p {
+        font-size: 12px;
+    }
+
+    .third-page-img {
+        height: 200px;
+    }
+
+    .text>h1 {
+        font-size: 16px;
+    }
+
+    .text>p {
+        font-size: 13px;
+        padding: 3px;
+    }
+
+    .fa-circle-check {
+        font-size: 22px;
+        margin: 3px;
+    }
+
+    .cardio-monitoring,
+    .expert-cardiologist,
+    .comfort-environment,
+    .oxygen-therapy,
+    .septal-mastectomy,
+    .coil-embolization {
+        gap: 8px;
+        padding: 6px 8px;
+        min-height: 70px;
+    }
+
+    /* fourth page */
+    .fourth-page-main1 {
+        padding: 15px 0;
+    }
+
+    .fourth-page-content {
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .left-side-area-text>h1 {
+        font-size: 22px;
+        padding: 3px;
+    }
+
+    .left-side-area-text>p {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .button-areas {
+        gap: 8px;
+        padding: 5px 0;
+    }
+
+    .emergency,
+    .facilities,
+    .reaction {
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .button-areas-icon {
+        font-size: 22px;
+    }
+
+    .button-areas-text {
+        font-size: 13px;
+    }
+
+    .be-right-path {
+        padding: 10px;
+    }
+
+    .be-right-path-img {
+        height: 120px;
+    }
+
+    .be-right-path-text {
+        font-size: 13px;
+    }
+
+    .be-right-path-text>p {
+        line-height: 22px;
+        font-size: 13px;
+    }
+
+    .make-an-appointment-form {
+        padding: 15px;
+    }
+
+    form h1 {
+        font-size: 20px;
+        padding-top: 0;
+        padding-bottom: 12px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        height: 60px;
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .btn-submit {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .appointment-i,
+    .call-the-hospital-i {
+        padding: 10px 15px;
+    }
+
+    .fourth-page-main2-icon {
+        font-size: 28px;
+    }
+
+    .appointment-text>p,
+    .call-the-hospital-i-text>p {
+        font-size: 12px;
+    }
+
+    .appointment-text>h2,
+    .call-the-hospital-i-text>h2 {
+        font-size: 15px;
+    }
+
+    /* fifth page */
+    .fifth-page-heading-box>h2 {
+        font-size: 24px;
+    }
+
+    .fifth-page-heading-box>h4 {
+        font-size: 11px;
+    }
+
+    .fifth-page-desc-box {
+        font-size: 13px;
+    }
+
+    .fifth-page-img1-area,
+    .fifth-page-img2-area,
+    .fifth-page-img3-area,
+    .fifth-page-img4-area {
+        width: 140px;
+        height: 140px;
+    }
+
+    .fifth-page-heading {
+        font-size: 16px;
+        padding-top: 12px;
+        padding-bottom: 6px;
+    }
+
+    .fifth-page-cont-div-1,
+    .fifth-page-cont-div-2,
+    .fifth-page-cont-div-3,
+    .fifth-page-cont-div-4 {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+
+    .circle-img {
+        max-width: 220px;
+    }
+
+    /* sixth page */
+    .box-1-para {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .box-1-para-2 {
+        font-size: 14px;
+        padding: 10px 0;
+        line-height: 24px;
+    }
+
+    .box-2,
+    .box-3 {
+        min-height: 400px;
+        padding: 15px 12px;
+    }
+
+    .basic-plan,
+    .box-3-basic-plan {
+        font-size: 20px;
+    }
+
+    .basic-plan-currency,
+    .box-3-basic-plan-currency {
+        font-size: 20px;
+    }
+
+    .basic-plan-price,
+    .box-3-basic-plan-price {
+        font-size: 34px;
+    }
+
+    .basic-plan-month,
+    .box-3-basic-plan-month {
+        font-size: 12px;
+    }
+
+    .price-div,
+    .box-3-price-div {
+        padding-bottom: 20px;
+        margin: 5px 0 15px;
+    }
+
+    .basic-plan-price-box,
+    .box-3-basic-plan-price-box {
+        padding-top: 15px;
+    }
+
+    .ms-icon,
+    .hrm-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .ms-icon-content>h1 {
+        font-size: 15px;
+        margin: 0 0 2px 10px;
+    }
+
+    .d-flex-div-cont {
+        font-size: 12px;
+        margin: 0 0 0 10px;
+    }
+
+    .check-icon,
+    .box-3-check-icon {
+        padding: 6px 0;
+        gap: 10px;
+    }
+
+    .check-text,
+    .box-3-check-text {
+        font-size: 13px;
+    }
+
+    .price-box-btn {
+        height: 44px;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+
+    .price-box-btn>a {
+        font-size: 14px;
+    }
+
+    /* seventh page */
+    .seventh-page-headings>h2 {
+        font-size: 24px;
+        padding: 8px 0;
+    }
+
+    .seventh-page-para {
+        font-size: 13px;
+    }
+
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase {
+        height: 170px;
+    }
+
+    .card-1-second-phase,
+    .card-2-second-phase,
+    .card-3-second-phase {
+        min-height: 200px;
+        padding: 12px;
+    }
+
+    .second-phase-content>h1 {
+        font-size: 18px;
+    }
+
+    .second-phase-content>p {
+        padding: 0 10px;
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .second-phase-content {
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .admin-and-comments {
+        font-size: 11px;
+    }
+
+    .admin,
+    .comments {
+        font-size: 11px;
+        gap: 4px;
+    }
+
+    /* eight section */
+    .container-first-box {
+        padding: 10px 15px;
+        gap: 12px;
+    }
+
+    .cardioly-img {
+        width: 120px;
+        height: 38px;
+    }
+
+    .clinic-add,
+    .phone-no {
+        max-width: 240px;
+        gap: 10px;
+    }
+
+    .add-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .add-details>h1,
+    .phoneno-details>h1 {
+        font-size: 14px;
+        padding: 2px 0;
+    }
+
+    .add-details>p,
+    .phoneno-details>p {
+        font-size: 12px;
+    }
+
+    .social-media {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .information-box,
+    .latest-news-box,
+    .news-letter-box,
+    .opening-hours-box {
+        max-width: 100%;
+        padding: 8px 0;
+    }
+
+    .footer-titles {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+
+    .li-menu {
+        padding: 4px 0;
+    }
+
+    .li-menu a {
+        font-size: 13px;
+    }
+
+    .query-logo-1,
+    .query-logo-2 {
+        width: 48px;
+        height: 48px;
+    }
+
+    .query-content>p {
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+
+    .query-1,
+    .query-2 {
+        padding-bottom: 8px;
+        gap: 8px;
+    }
+
+    .newsletter-input {
+        height: 34px;
+        padding: 6px 10px;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .newsletter-btn {
+        height: 36px;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+
+    .opening-hour-li-menu {
+        padding: 4px 0;
+        font-size: 13px;
+    }
+
+    /* footer */
+    .footer-copyright h3 {
+        font-size: 12px;
+    }
+
+    .footer-li {
+        padding: 0 10px;
+    }
+
+    .footer-li a {
+        font-size: 12px;
+    }
+
+    .footer-ul {
+        gap: 3px;
+    }
+}
+
+/* Very small screens (up to 360px) */
+@media screen and (max-width: 360px) {
+    .heart-text {
+        font-size: 24px;
+    }
+
+    .homepage {
+        height: 340px;
+        min-height: 300px;
+    }
+
+    .homepage-text {
+        padding: 5px;
+    }
+
+    .commit {
+        font-size: 9px;
+        padding: 4px 12px;
+    }
+
+    .read-more,
+    .contact-us {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+
+    .for-button {
+        gap: 8px;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        height: 150px;
+    }
+
+    .third-page-heading-text>h1 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .left-side-area-text>h1 {
+        font-size: 20px;
+    }
+
+    .make-an-appointment-form {
+        padding: 12px;
+    }
+
+    form h1 {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .form-group textarea {
+        height: 50px;
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .btn-submit {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .box-1-para {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .basic-plan-price,
+    .box-3-basic-plan-price {
+        font-size: 30px;
+    }
+
+    .fifth-page-img1-area,
+    .fifth-page-img2-area,
+    .fifth-page-img3-area,
+    .fifth-page-img4-area {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* ============================================================
+   CSS ONLY MOBILE MENU - TOGGLE VISIBILITY
+   ============================================================ */
+
+#mobile-menu-toggle {
+    display: none;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+/* Show mobile menu button on small screens */
+@media (max-width: 768px) {
+    .mobile-menu-button {
+        display: flex;
+    }
+}
+
+/* Hide desktop menu items that shouldn't show on mobile */
+@media (max-width: 768px) {
+    nav>.my-icon {
+        display: inline-block;
+    }
+
+    nav>hr {
+        display: none;
+    }
+}
+
+/* Fix for search bar on mobile */
+@media (max-width: 768px) {
+    .search-bar {
+        height: 300px;
+        transform: translateY(-300px);
+    }
+
+    .second-search {
+        width: 90%;
+        height: 70px;
+        font-size: 22px;
+    }
+
+    .second-search::placeholder {
+        font-size: 20px;
+    }
+
+    .cancel-search {
+        font-size: 30px;
+        right: 20px;
+        top: 20px;
+        transform: translateX(200px);
+    }
+
+    #search[type="checkbox"]:checked~label .cancel-search {
+        transform: translateX(200px);
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        height: 250px;
+        transform: translateY(-250px);
+    }
+
+    .second-search {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .second-search::placeholder {
+        font-size: 16px;
+    }
+
+    .cancel-search {
+        font-size: 24px;
+        right: 15px;
+        top: 15px;
+        transform: translateX(100px);
+    }
+
+    #search[type="checkbox"]:checked~label .cancel-search {
+        transform: translateX(100px);
+    }
+}
+/* ============================================================
+   FINAL RESPONSIVE OVERRIDES — ALL DEVICES
+   ============================================================ */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- LARGE LAPTOPS ---------- */
+@media (max-width: 1200px) {
+    header { padding: 0 16px; }
+
+    .logo { width: 18%; }
+    nav { width: 62%; min-width: 0; }
+    .menu { gap: 12px; }
+    .make-appointment { width: 20%; }
+
+    .heart-text { width: min(800px, 92vw); }
+
+    .second-page {
+        width: 100%;
+        height: auto !important;
+        transform: none !important;
+        padding: 40px 20px 60px;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .heart-surgery,
+    .valve-diseases,
+    .children-services {
+        width: calc(33.333% - 16px);
+        max-width: none;
+        height: auto;
+    }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text,
+    .second-page-icon {
+        width: 100%;
+    }
+
+    .third-page { height: auto; }
+    .third-page-center { height: auto; min-height: 500px; }
+
+    .left-side,
+    .right-side { width: 29%; }
+    .third-page-img { width: 42%; }
+
+    .fourth-page-content { height: auto; }
+    .left-side-area { width: 55%; }
+    .right-side-area { width: 45%; }
+    .left-side-area-text { width: 100%; }
+    .be-right-path-text,
+    .be-right-path-text > p { width: 100%; max-width: 100%; }
+
+    .make-an-appointment-form {
+        position: relative;
+        width: min(440px, calc(100% - 30px));
+        margin: 40px auto;
+        right: auto;
+    }
+
+    .fifth-page-main,
+    .sixth-page-main,
+    .seventh-page-main,
+    .eight-main-container { height: auto; }
+
+    .fifth-page-main-box,
+    .fifth-page-content-box,
+    .fifth-page-img-area,
+    .sixth-page-container,
+    .seventh-page-container,
+    .seventh-page-content,
+    .seventh-page-card { width: 100%; max-width: 1200px; }
+
+    .fifth-page-img-area { height: auto; flex-wrap: wrap; }
+    .circle-img { width: 25%; height: auto; }
+
+    .sixth-page-container { height: auto; }
+    .box-1 { width: 36%; }
+    .box-2, .box-3 { width: 28%; }
+
+    .seventh-page-content { height: auto; }
+    .seventh-page-card { height: auto; flex-wrap: wrap; }
+    .seventh-page-card-1,
+    .seventh-page-card-2,
+    .seventh-page-card-3 { width: calc(33.333% - 20px); }
+
+    .container-first-box,
+    .eight-container-parent { width: 90%; }
+}
+
+/* ---------- TABLETS ---------- */
+@media (max-width: 991px) {
+    header { padding: 10px 15px; }
+    .logo { width: 22%; }
+    nav { width: 58%; }
+    .menu { gap: 9px; font-size: 14px; }
+    .make-appointment { width: 20%; }
+
+    .homepage {
+        height: 600px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .heart-text {
+        width: 92%;
+        font-size: clamp(42px, 7vw, 60px);
+    }
+
+    .second-page {
+        padding: 35px 18px 55px;
+        gap: 20px;
+    }
+
+    .heart-surgery,
+    .valve-diseases,
+    .children-services {
+        width: calc(50% - 10px);
+    }
+
+    .third-page-center {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .left-side,
+    .right-side,
+    .third-page-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .third-page-img {
+        min-height: 360px;
+        background-size: contain;
+        background-position: center;
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .left-side { grid-column: 1; grid-row: 1; }
+    .right-side { grid-column: 2; grid-row: 1; }
+
+    .fourth-page-content { flex-direction: column; }
+    .left-side-area,
+    .right-side-area { width: 100%; }
+
+    .left-side-area { padding: 45px 25px; }
+    .right-side-area { padding: 20px 0 40px; }
+
+    .make-an-appointment-form {
+        width: min(600px, calc(100% - 40px));
+        margin: 25px auto;
+    }
+
+    .button-areas { flex-wrap: wrap; justify-content: center; }
+
+    .fourth-page-main2,
+    .fourth-page-div { height: auto; }
+
+    .fourth-page-div { justify-content: center; flex-wrap: wrap; gap: 20px; padding: 25px 0; }
+
+    .fifth-page-img-area { display: grid; grid-template-columns: repeat(2, 1fr); gap: 35px; }
+    .circle-img { width: 100%; }
+
+    .sixth-page-container { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+    .box-1 { width: 100%; grid-column: 1 / -1; }
+    .box-2, .box-3 { width: 100%; }
+
+    .seventh-page-content { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; padding: 40px 25px; }
+    .seventh-page-headings,
+    .seventh-page-para { width: 100%; height: auto; }
+
+    .seventh-page-card { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; padding: 25px; }
+    .seventh-page-card-1,
+    .seventh-page-card-2,
+    .seventh-page-card-3 { width: 100%; }
+
+    .container-first-box { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; height: auto; padding: 30px 0; }
+    .cardioly-img,
+    .clinic-add,
+    .phone-no,
+    .footer-social-logo { width: 100%; }
+
+    .eight-container-second-box { height: auto; padding: 35px 0; }
+    .eight-container-parent { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .information-box,
+    .latest-news-box,
+    .news-letter-box,
+    .opening-hours-box { width: 100%; height: auto; }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 767px) {
+    header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        padding: 10px 15px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: calc(100% - 55px);
+        height: 45px;
+        justify-content: flex-start;
+    }
+
+    .logo > img { height: auto; max-height: 34px; width: auto; }
+
+    #mobile-menu-toggle { display: none; }
+
+    .mobile-menu-button {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        margin-left: auto;
+        padding: 6px;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        order: 2;
+    }
+
+    .mobile-menu-button span {
+        display: block;
+        width: 27px;
+        height: 3px;
+        background: #333;
+        border-radius: 3px;
+        transition: .25s ease;
+    }
+
+    header nav {
+        width: 100%;
+        height: 0;
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        order: 4;
+        transition: max-height .3s ease;
+    }
+
+    #mobile-menu-toggle:checked ~ nav {
+        height: auto;
+        max-height: 1500px;
+        overflow: visible;
+        padding-top: 10px;
+    }
+
+    #mobile-menu-toggle:checked + .mobile-menu-button span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu-toggle:checked + .mobile-menu-button span:nth-child(2) { opacity: 0; }
+
+    #mobile-menu-toggle:checked + .mobile-menu-button span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    nav .menu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        line-height: normal;
+    }
+
+    nav .menu-item {
+        width: 100%;
+        text-align: center;
+        padding: 11px 10px;
+        line-height: normal;
+    }
+
+    nav .sub-menu,
+    nav .sub-menu-project {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100%;
+        margin: 8px 0 0;
+        display: none;
+        line-height: normal;
+    }
+
+    nav .menu-item:hover .sub-menu,
+    nav .menu-item:hover .sub-menu-project { display: block; }
+
+    nav .sub-menu-item,
+    nav .sub-menu-item-project {
+        width: 100%;
+        padding: 11px;
+        text-align: center;
+    }
+
+    nav > hr { display: none; }
+    nav > .my-icon { margin: 8px auto; }
+
+    .make-appointment {
+        width: 100%;
+        height: 48px;
+        margin: 8px 0 0;
+        order: 5;
+    }
+
+    .make-appointment > p { padding: 14px 8px; }
+
+    /* HERO */
+    .homepage {
+        width: 100%;
+        height: 520px;
+        min-height: 480px;
+        margin-top: 0;
+        background-size: cover;
+        background-position: center;
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+    }
+
+    .homepage-text {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 55px 15px 35px;
+        gap: 16px;
+    }
+
+    .heart-text {
+        width: 100%;
+        font-size: clamp(32px, 8vw, 48px);
+        line-height: 1.15;
+    }
+
+    .for-button { flex-wrap: wrap; gap: 12px; }
+
+    /* SECOND PAGE */
+    .second-page {
+        width: 100%;
+        height: auto !important;
+        min-height: 0;
+        margin: 0;
+        padding: 35px 15px 50px;
+        transform: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .heart-surgery,
+    .valve-diseases,
+    .children-services {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        margin: 0;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text {
+        width: 100%;
+        height: auto;
+        min-height: 140px;
+        padding-bottom: 15px;
+    }
+
+    .second-page-icon {
+        width: 100%;
+        margin: 0;
+        padding-right: 15px;
+    }
+
+    /* THIRD PAGE */
+    .third-page { height: auto; padding: 0 15px 50px; }
+    .third-page-heading-text { height: auto; padding: 35px 0 20px; text-align: center; }
+    .third-page-heading-text > h1 { font-size: clamp(26px, 6vw, 34px); line-height: 1.2; }
+    .third-page-center { display: flex; flex-direction: column; height: auto; padding: 10px 0; gap: 20px; }
+    .left-side,
+    .right-side,
+    .third-page-img { width: 100%; max-width: 600px; height: auto; }
+    .third-page-img { min-height: 280px; background-size: contain; background-position: center; order: 2; }
+    .left-side { order: 1; }
+    .right-side { order: 3; }
+    .cardio-monitoring,
+    .expert-cardiologist,
+    .comfort-environment,
+    .oxygen-therapy,
+    .septal-mastectomy,
+    .coil-embolization { width: 100%; height: auto; min-height: 90px; margin-top: 12px; }
+
+    /* FOURTH PAGE */
+    .fourth-page-main,
+    .fourth-page-main1,
+    .fourth-page-content,
+    .left-side-area,
+    .right-side-area { height: auto; }
+    .fourth-page-content { flex-direction: column; }
+    .left-side-area,
+    .right-side-area { width: 100%; }
+    .left-side-area { padding: 45px 15px; }
+    .left-side-area-text { width: 100%; margin: 0; }
+    .left-side-area-text > h1 { font-size: clamp(28px, 7vw, 38px); line-height: 1.2; }
+    .button-areas { width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px 0; }
+    .emergency, .facilities, .reaction { width: 100%; }
+    .be-right-path { flex-direction: column; align-items: stretch; }
+    .be-right-path-img { width: 100%; max-width: none; margin: 15px 0; height: 190px; }
+    .be-right-path-text,
+    .be-right-path-text > p { width: 100%; max-width: 100%; }
+    .right-side-area { padding: 10px 0 40px; }
+    .make-an-appointment-form {
+        position: relative !important;
+        width: calc(100% - 24px);
+        max-width: 600px;
+        height: auto;
+        margin: 20px auto 30px;
+        padding: 20px 15px;
+        right: auto !important;
+        left: auto !important;
+        top: auto !important;
+    }
+    .make-an-appointment-form form { width: 100%; }
+    .form-group { width: 100%; }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select,
+    .select,
+    .form-group textarea,
+    .btn-submit { width: 100%; max-width: 100%; }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select { padding: 16px; }
+    .fourth-page-main2 { height: auto; padding: 20px 15px; }
+    .fourth-page-div { width: 100%; height: auto; flex-direction: column; align-items: stretch; gap: 10px; }
+    .appointment-i,
+    .call-the-hospital-i { width: 100%; height: auto; min-height: 90px; padding: 20px 10px; justify-content: center; }
+
+    /* FIFTH PAGE */
+    .fifth-page-main { height: auto; padding: 45px 15px; }
+    .fifth-page-main-box,
+    .fifth-page-content-box,
+    .fifth-page-img-area { width: 100%; height: auto; }
+    .fifth-page-heading-box > h2 { font-size: clamp(28px, 7vw, 38px); }
+    .fifth-page-desc-box p br { display: none; }
+    .fifth-page-img-area { display: grid; grid-template-columns: 1fr; gap: 45px; padding-top: 25px; }
+    .circle-img { width: 100%; max-width: 360px; height: auto; margin: auto; }
+
+    /* SIXTH PAGE */
+    .sixth-page-main { height: auto; padding: 45px 15px; }
+    .sixth-page-container { width: 100%; height: auto; display: flex; flex-direction: column; gap: 25px; padding: 0; }
+    .box-1, .box-2, .box-3 { width: 100%; max-width: 600px; height: auto; }
+    .box-1 { padding: 15px 5px 25px; }
+    .box-1-para { font-size: clamp(26px, 7vw, 35px); }
+    .box-1-para-2, .d-flex { width: 100%; max-width: 100%; }
+    .box-2, .box-3 { padding: 30px 15px; }
+
+    /* SEVENTH PAGE */
+    .seventh-page-main,
+    .seventh-page-container { width: 100%; height: auto; }
+    .seventh-page-content { width: 100%; height: auto; display: flex; flex-direction: column; padding: 40px 15px 20px; text-align: center; }
+    .seventh-page-headings,
+    .seventh-page-para { width: 100%; height: auto; }
+    .seventh-page-headings > h2 { font-size: clamp(27px, 7vw, 36px); line-height: 1.2; }
+    .seventh-page-card { width: 100%; height: auto; display: flex; flex-direction: column; align-items: center; gap: 35px; padding: 20px 15px 45px; }
+    .seventh-page-card-1,
+    .seventh-page-card-2,
+    .seventh-page-card-3 { width: 100%; max-width: 500px; height: auto; }
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase { width: 100%; height: 260px; background-size: cover; background-position: center; }
+    .card-1-second-phase,
+    .card-2-second-phase,
+    .card-3-second-phase { width: calc(100% - 20px); height: auto; min-height: 240px; margin: -20px 10px 0; }
+    .second-phase-content > p { padding: 0 20px; }
+
+    /* EIGHTH / FOOTER CONTENT */
+    .eight-main-container { height: auto; }
+    .container-first-box { width: calc(100% - 30px); height: auto; display: flex; flex-direction: column; align-items: center; padding: 30px 0; gap: 25px; }
+    .cardioly-img, .clinic-add, .phone-no, .footer-social-logo { width: 100%; max-width: 400px; }
+    .clinic-add, .phone-no { justify-content: center; }
+    .eight-container-second-box { height: auto; padding: 35px 15px; }
+    .eight-container-parent { width: 100%; display: flex; flex-direction: column; gap: 25px; }
+    .information-box, .latest-news-box, .news-letter-box, .opening-hours-box { width: 100%; height: auto; }
+    .latest-news-queries { width: 100%; height: auto; }
+    .query-content { min-width: 0; }
+    .query-content > p { width: auto; }
+    .newsletter-input { width: 100%; max-width: 400px; }
+
+    /* BOTTOM FOOTER */
+    footer { height: auto; }
+    .footer-container { width: 100%; height: auto; min-height: 90px; flex-direction: column; gap: 12px; padding: 25px 15px; text-align: center; }
+    .footer-copyright, .footer-menu { width: 100%; }
+    .footer-ul { justify-content: center; flex-wrap: wrap; }
+}
+
+/* ---------- SMALL PHONES ---------- */
+@media (max-width: 480px) {
+    .homepage { height: 500px; min-height: 470px; }
+    .homepage-text { padding: 40px 12px 30px; }
+    .heart-text { font-size: 32px; }
+
+    .second-page { padding: 25px 10px 40px; gap: 20px; }
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img { height: 205px; }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text { padding: 20px 15px 10px; }
+
+    .third-page { padding-left: 10px; padding-right: 10px; }
+    .third-page-heading-text > h1 { font-size: 26px; }
+    .third-page-img { min-height: 240px; }
+
+    .left-side-area { padding: 35px 12px; }
+    .button-areas { grid-template-columns: 1fr; }
+    .make-an-appointment-form { width: calc(100% - 12px); padding: 18px 12px; }
+
+    .fifth-page-main { padding-left: 10px; padding-right: 10px; }
+    .circle-img { max-width: 320px; }
+
+    .sixth-page-main { padding-left: 10px; padding-right: 10px; }
+    .box-1-para { font-size: 25px; }
+
+    .seventh-page-card { padding-left: 10px; padding-right: 10px; }
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase { height: 220px; }
+    .second-phase-content > h1 { font-size: 21px; }
+
+    .container-first-box { width: calc(100% - 20px); }
+    .footer-container { padding-left: 10px; padding-right: 10px; }
+}
+
+/* ---------- VERY SMALL PHONES ---------- */
+@media (max-width: 360px) {
+    .mobile-menu-button { transform: scale(.9); transform-origin: right center; }
+    .homepage { height: 470px; min-height: 440px; }
+    .heart-text { font-size: 29px; }
+    .commit { font-size: 9px; }
+    .read-more, .contact-us { padding: 9px 16px; font-size: 10px; }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img { height: 185px; }
+
+    .left-side-area-text > h1 { font-size: 24px; }
+    form h1 { font-size: 20px; }
+
+    .third-page-heading-text > h1 { font-size: 24px; }
+    .text > h1 { font-size: 18px; }
+    .text > p { font-size: 12px; }
+
+    .fifth-page-heading-box > h2,
+    .seventh-page-headings > h2 { font-size: 25px; }
+}
+
+/* =========================================================
+   FINAL RESPONSIVE OVERRIDES
+   Put AFTER all existing CSS. No JavaScript required.
+   ========================================================= */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Prevent fixed-width children from forcing horizontal scrolling */
+.second-search,
+.fifth-page-main-box,
+.fifth-page-content-box,
+.fifth-page-img-area,
+.sixth-page-container,
+.seventh-page-container,
+.seventh-page-content,
+.seventh-page-card,
+.container-first-box,
+.eight-container-parent,
+.make-an-appointment-form {
+    max-width: 100%;
+}
+
+/* ---------------- DESKTOP-SAFE BASE ---------------- */
+.mobile-menu-button,
+#mobile-menu-toggle {
+    display: none;
+}
+
+/* =========================================================
+   LARGE TABLET / LAPTOP 1200px
+   ========================================================= */
+@media (max-width: 1200px) {
+
+    header {
+        padding-inline: 20px;
+    }
+
+    .logo { width: 22%; }
+    nav { width: 56%; min-width: 0; }
+    .make-appointment { width: 22%; }
+
+    .menu {
+        width: 100%;
+        gap: clamp(8px, 1.5vw, 20px);
+        flex-wrap: wrap;
+    }
+
+    .homepage {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .heart-text {
+        width: min(800px, 90vw);
+        font-size: clamp(44px, 6vw, 65px);
+    }
+
+    .second-page {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        transform: none;
+        padding: 50px 24px 70px;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .heart-surgery,
+    .valve-diseases,
+    .children-services {
+        width: calc(50% - 12px);
+        height: auto;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        width: 100%;
+        height: 280px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text,
+    .second-page-icon {
+        width: 100%;
+    }
+
+    .third-page,
+    .third-page-center {
+        height: auto;
+    }
+
+    .third-page-center {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, .9fr) minmax(0, 1fr);
+        align-items: center;
+    }
+
+    .left-side,
+    .right-side,
+    .third-page-img {
+        width: 100%;
+        max-width: none;
+    }
+
+    .third-page-img {
+        min-height: 500px;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .fourth-page-main,
+    .fourth-page-main1,
+    .fourth-page-content,
+    .left-side-area,
+    .right-side-area {
+        height: auto;
+    }
+
+    .fourth-page-content {
+        align-items: stretch;
+    }
+
+    .left-side-area {
+        width: 55%;
+        padding: 50px 25px;
+    }
+
+    .right-side-area {
+        width: 45%;
+    }
+
+    .left-side-area-text {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .button-areas {
+        flex-wrap: wrap;
+    }
+
+    .be-right-path {
+        flex-wrap: wrap;
+    }
+
+    .be-right-path-text,
+    .be-right-path-text > p {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .make-an-appointment-form {
+        position: relative !important;
+        width: min(440px, calc(100% - 30px));
+        height: auto;
+        margin: 40px auto;
+        right: auto !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    .fifth-page-main {
+        height: auto;
+        padding: 60px 25px;
+    }
+
+    .fifth-page-main-box,
+    .fifth-page-content-box,
+    .fifth-page-img-area {
+        width: 100%;
+        height: auto;
+    }
+
+    .fifth-page-img-area {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 20px;
+    }
+
+    .circle-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sixth-page-main {
+        height: auto;
+        padding: 60px 25px;
+    }
+
+    .sixth-page-container {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+        gap: 25px;
+    }
+
+    .box-1 { width: 100%; grid-column: 1 / -1; height: auto; }
+    .box-2, .box-3 { width: 100%; height: auto; }
+
+    .seventh-page-main,
+    .seventh-page-container,
+    .seventh-page-content,
+    .seventh-page-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .seventh-page-content {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+        padding: 50px 25px 20px;
+    }
+
+    .seventh-page-headings,
+    .seventh-page-para {
+        width: 100%;
+        height: auto;
+    }
+
+    .seventh-page-card {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        padding: 30px 25px 60px;
+    }
+
+    .seventh-page-card-1,
+    .seventh-page-card-2,
+    .seventh-page-card-3 {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase {
+        width: 100%;
+        height: 260px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-1-second-phase,
+    .card-2-second-phase,
+    .card-3-second-phase {
+        width: calc(100% - 20px);
+        height: auto;
+        min-height: 250px;
+        margin: -20px 10px 0;
+    }
+
+    .eight-main-container,
+    .eight-container-second-box {
+        height: auto;
+    }
+
+    .container-first-box {
+        width: 90%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        padding: 30px 0;
+    }
+
+    .cardioly-img,
+    .clinic-add,
+    .phone-no,
+    .footer-social-logo {
+        width: 100%;
+    }
+
+    .eight-container-parent {
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+        padding: 40px 0;
+    }
+
+    .information-box,
+    .latest-news-box,
+    .news-letter-box,
+    .opening-hours-box {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* =========================================================
+   TABLET 991px
+   ========================================================= */
+@media (max-width: 991px) {
+
+    header {
+        min-height: 76px;
+        padding: 12px 20px;
+    }
+
+    .logo { width: 24%; }
+    nav { width: 58%; }
+    .make-appointment { width: 18%; }
+
+    .menu {
+        gap: 8px;
+    }
+
+    .menu-item {
+        font-size: 13px;
+    }
+
+    .second-page {
+        padding-top: 45px;
+    }
+
+    .third-page-center {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .third-page-img {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        min-height: 380px;
+    }
+
+    .left-side { grid-column: 1; }
+    .right-side { grid-column: 2; }
+
+    .fourth-page-content {
+        flex-direction: column;
+    }
+
+    .left-side-area,
+    .right-side-area {
+        width: 100%;
+    }
+
+    .left-side-area {
+        padding: 45px 25px;
+    }
+
+    .make-an-appointment-form {
+        width: min(560px, calc(100% - 40px));
+    }
+}
+
+/* =========================================================
+   MOBILE 767px
+   ========================================================= */
+@media (max-width: 767px) {
+
+    /* ---------- HEADER + HAMBURGER ---------- */
+
+    header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 70px;
+        padding: 12px 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        width: calc(100% - 60px);
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .logo > img {
+        width: auto;
+        max-width: 150px;
+        height: 40px;
+    }
+
+    #mobile-menu-toggle {
+        display: none !important;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 46px;
+        height: 46px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 10002;
+    }
+
+    .mobile-menu-button span {
+        display: block;
+        width: 29px;
+        height: 3px;
+        border-radius: 4px;
+        background: #192136;
+        transition: transform .25s ease, opacity .2s ease;
+    }
+
+    header nav {
+        width: 100%;
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        transition: max-height .35s ease;
+    }
+
+    #mobile-menu-toggle:checked ~ nav {
+        max-height: 1600px;
+        overflow: visible;
+        padding-top: 10px;
+    }
+
+    #mobile-menu-toggle:checked + .mobile-menu-button span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    #mobile-menu-toggle:checked + .mobile-menu-button span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu-toggle:checked + .mobile-menu-button span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    nav .menu {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        line-height: normal;
+        padding: 5px 0;
+    }
+
+    nav .menu-item {
+        width: 100%;
+        padding: 12px 10px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    /* Mobile dropdowns are visible so touch devices can access every item. */
+    nav .sub-menu,
+    nav .sub-menu-project {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 8px 0 0;
+        display: block !important;
+        border-top: 2px solid #ee344e;
+    }
+
+    nav .sub-menu-item,
+    nav .sub-menu-item-project {
+        width: 100%;
+        padding: 11px 8px;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    nav > .my-icon {
+        margin: 8px auto;
+    }
+
+    nav > hr {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .search-bar {
+        position: fixed;
+        width: 100%;
+        height: 260px;
+        z-index: 10010;
+    }
+
+    .second-search {
+        width: 85%;
+        max-width: 700px;
+        height: 65px;
+        font-size: 21px;
+    }
+
+    .second-search::placeholder {
+        font-size: 16px;
+    }
+
+    .cancel-search {
+        right: 20px;
+        transform: none !important;
+    }
+
+    #search[type="checkbox"]:checked ~ label .cancel-search {
+        transform: none !important;
+    }
+
+    .make-appointment {
+        width: auto;
+        height: 55px;
+        margin-top: 10px;
+    }
+
+    .make-appointment > p {
+        padding: 17px;
+        text-align: center;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .homepage {
+        width: 100%;
+        height: 620px;
+        min-height: 560px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .homepage-text {
+        width: 100%;
+        height: auto;
+        padding: 50px 15px;
+        margin-bottom: 0;
+    }
+
+    .heart-text {
+        width: 100%;
+        max-width: 620px;
+        font-size: clamp(34px, 8vw, 54px);
+        line-height: 1.15;
+        overflow-wrap: anywhere;
+    }
+
+    .for-button {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* ---------- SECTION 2 ---------- */
+
+    .second-page {
+        width: 100%;
+        height: auto !important;
+        min-height: 0;
+        padding: 35px 15px 55px;
+        margin: 0;
+        transform: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .heart-surgery,
+    .valve-diseases,
+    .children-services {
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+        margin: 0;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        width: 100%;
+        height: 260px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text {
+        width: 100%;
+        height: auto;
+        min-height: 145px;
+        padding-bottom: 10px;
+    }
+
+    .second-page-icon {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* ---------- SECTION 3 ---------- */
+
+    .third-page {
+        width: 100%;
+        height: auto;
+        padding: 0 15px 50px;
+    }
+
+    .third-page-heading-text {
+        width: 100%;
+        height: auto;
+        padding: 40px 0 25px;
+        text-align: center;
+    }
+
+    .third-page-heading-text > h1 {
+        font-size: clamp(27px, 7vw, 38px);
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .third-page-center {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .left-side,
+    .right-side,
+    .third-page-img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .left-side { order: 1; }
+    .third-page-img { order: 2; min-height: 320px; background-size: contain; background-position: center; }
+    .right-side { order: 3; }
+
+    .cardio-monitoring,
+    .expert-cardiologist,
+    .comfort-environment,
+    .oxygen-therapy,
+    .septal-mastectomy,
+    .coil-embolization {
+        width: 100%;
+        min-height: 100px;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    /* ---------- SECTION 4 ---------- */
+
+    .fourth-page-main,
+    .fourth-page-main1,
+    .fourth-page-content,
+    .left-side-area,
+    .right-side-area {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourth-page-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-side-area {
+        padding: 45px 15px;
+    }
+
+    .left-side-area-text {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .left-side-area-text > h1 {
+        font-size: clamp(27px, 7vw, 38px);
+        line-height: 1.2;
+    }
+
+    .button-areas {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .emergency,
+    .facilities,
+    .reaction {
+        width: 100%;
+    }
+
+    .be-right-path {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .be-right-path-img {
+        width: 100%;
+        max-width: none;
+        height: 190px;
+        margin: 15px 0;
+    }
+
+    .be-right-path-text,
+    .be-right-path-text > p {
+        width: 100%;
+        max-width: none;
+    }
+
+    .right-side-area {
+        padding: 10px 0 45px;
+    }
+
+    .make-an-appointment-form {
+        position: relative !important;
+        width: calc(100% - 24px);
+        max-width: 600px;
+        height: auto;
+        margin: 20px auto 30px;
+        padding: 20px 15px;
+        right: auto !important;
+        left: auto !important;
+        top: auto !important;
+    }
+
+    .make-an-appointment-form form,
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select,
+    .select,
+    .form-group textarea,
+    .btn-submit {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select {
+        padding: 16px;
+    }
+
+    .form-group textarea {
+        min-height: 90px;
+        height: auto;
+    }
+
+    .fourth-page-main2 {
+        width: 100%;
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .fourth-page-div {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .appointment-i,
+    .call-the-hospital-i {
+        width: 100%;
+        min-height: 95px;
+        height: auto;
+        padding: 20px 10px;
+        justify-content: center;
+    }
+
+    /* ---------- SECTION 5 ---------- */
+
+    .fifth-page-main {
+        width: 100%;
+        height: auto;
+        padding: 45px 15px;
+    }
+
+    .fifth-page-main-box,
+    .fifth-page-content-box,
+    .fifth-page-img-area {
+        width: 100%;
+        height: auto;
+    }
+
+    .fifth-page-heading-box > h2 {
+        font-size: clamp(28px, 7vw, 38px);
+    }
+
+    .fifth-page-desc-box p br {
+        display: none;
+    }
+
+    .fifth-page-img-area {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding-top: 25px;
+    }
+
+    .circle-img {
+        width: 100%;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    /* ---------- SECTION 6 ---------- */
+
+    .sixth-page-main {
+        width: 100%;
+        height: auto;
+        padding: 45px 15px;
+    }
+
+    .sixth-page-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .box-1,
+    .box-2,
+    .box-3 {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .box-1-para-2,
+    .d-flex {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ---------- SECTION 7 ---------- */
+
+    .seventh-page-main,
+    .seventh-page-container,
+    .seventh-page-content,
+    .seventh-page-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .seventh-page-content {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 15px 20px;
+        text-align: center;
+    }
+
+    .seventh-page-headings,
+    .seventh-page-para {
+        width: 100%;
+        height: auto;
+    }
+
+    .seventh-page-headings > h2 {
+        font-size: clamp(27px, 7vw, 36px);
+        line-height: 1.2;
+    }
+
+    .seventh-page-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        padding: 20px 15px 45px;
+    }
+
+    .seventh-page-card-1,
+    .seventh-page-card-2,
+    .seventh-page-card-3 {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+    }
+
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase {
+        width: 100%;
+        height: 270px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-1-second-phase,
+    .card-2-second-phase,
+    .card-3-second-phase {
+        width: calc(100% - 20px);
+        height: auto;
+        min-height: 240px;
+        margin: -20px 10px 0;
+    }
+
+    .second-phase-content > p {
+        padding: 0 20px;
+    }
+
+    /* ---------- SECTION 8 ---------- */
+
+    .eight-main-container,
+    .eight-container-second-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .container-first-box {
+        width: calc(100% - 30px);
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding: 35px 0;
+    }
+
+    .cardioly-img,
+    .clinic-add,
+    .phone-no,
+    .footer-social-logo {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .eight-container-second-box {
+        padding: 40px 15px;
+    }
+
+    .eight-container-parent {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .information-box,
+    .latest-news-box,
+    .news-letter-box,
+    .opening-hours-box {
+        width: 100%;
+        height: auto;
+    }
+
+    .latest-news-queries {
+        width: 100%;
+        height: auto;
+    }
+
+    .query-content {
+        min-width: 0;
+    }
+
+    .query-content > p {
+        width: auto;
+    }
+
+    .newsletter-input {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer-container {
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        padding: 25px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-copyright,
+    .footer-menu {
+        width: 100%;
+    }
+
+    .footer-ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+
+/* =========================================================
+   SMALL PHONES 480px
+   ========================================================= */
+@media (max-width: 480px) {
+
+    .mobile-menu-button {
+        width: 42px;
+        height: 42px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .mobile-menu-button span {
+        width: 27px;
+    }
+
+    .logo img {
+        max-width: 125px;
+        height: auto;
+    }
+
+    .homepage {
+        min-height: 500px;
+        height: 530px;
+    }
+
+    .homepage-text {
+        padding: 35px 12px;
+    }
+
+    .heart-text {
+        font-size: 34px;
+    }
+
+    .for-button {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .read-more,
+    .contact-us {
+        width: min(190px, 100%);
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    .second-page {
+        padding: 25px 10px 40px;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        height: 210px;
+    }
+
+    .heart-surgery-text,
+    .valve-diseases-text,
+    .children-services-text {
+        padding: 20px 15px 10px;
+    }
+
+    .third-page {
+        padding-inline: 10px;
+    }
+
+    .third-page-heading-text > h1 {
+        font-size: 26px;
+    }
+
+    .third-page-img {
+        min-height: 240px;
+    }
+
+    .left-side-area {
+        padding: 35px 12px;
+    }
+
+    .button-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .make-an-appointment-form {
+        width: calc(100% - 12px);
+        padding: 18px 12px;
+    }
+
+    .fifth-page-main,
+    .sixth-page-main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .circle-img {
+        max-width: 320px;
+    }
+
+    .seventh-page-card {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .card-1-first-phase,
+    .card-2-first-phase,
+    .card-3-first-phase {
+        height: 220px;
+    }
+
+    .second-phase-content > h1 {
+        font-size: 21px;
+    }
+
+    .container-first-box {
+        width: calc(100% - 20px);
+    }
+
+    .footer-container {
+        padding-inline: 10px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL PHONES 360px
+   ========================================================= */
+@media (max-width: 360px) {
+
+    .logo img {
+        max-width: 110px;
+    }
+
+    .homepage {
+        min-height: 450px;
+        height: 480px;
+    }
+
+    .heart-text {
+        font-size: 29px;
+    }
+
+    .commit {
+        font-size: 9px;
+        padding-inline: 14px;
+    }
+
+    .read-more,
+    .contact-us {
+        padding: 12px 16px;
+        font-size: 11px;
+    }
+
+    .heart-surgery-img,
+    .valve-diseases-img,
+    .children-services-img {
+        height: 185px;
+    }
+
+    .left-side-area-text > h1 {
+        font-size: 24px;
+    }
+
+    form h1 {
+        font-size: 20px;
+    }
+
+    .third-page-heading-text > h1 {
+        font-size: 24px;
+    }
+
+    .text > h1 {
+        font-size: 18px;
+    }
+
+    .text > p {
+        font-size: 12px;
+    }
+
+    .fifth-page-heading-box > h2,
+    .seventh-page-headings > h2 {
+        font-size: 25px;
+    }
+}
